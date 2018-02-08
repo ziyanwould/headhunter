@@ -1,0 +1,337 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.all {
+  width: 920px;
+  margin: 0 auto;
+}
+.all .count {
+  width: 880px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.all .count .title {
+  width: 860px;
+  height: 110px;
+  font-family: 'Arial-BoldMT','Î¢ÈíÑÅºÚ'  ,'Microsoft YaHei',  'Arial Bold', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  line-height: 110px;
+}
+.all .count .tables {
+  width: 860px;
+  margin-top: 20px;
+  background: #ECF0F3;
+  padding: 20px 0;
+}
+.all .count .tables table {
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+.all .count .tables table tr td {
+  padding: 20px 14px;
+}
+.all .count .tables table tr td h5 {
+  margin-top: 20px;
+  line-height: 23px;
+}
+.all .count .tables table tr td p {
+  line-height: 24px;
+}
+.all .count .tables table td, .all .count .tables table th {
+  border-left: 1px solid #969696;
+  border-top: 1px solid #969696;
+}
+.all .count .group {
+  width: 860px;
+}
+.all .count .group h5 {
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  margin:0px 0 18px 0;
+}
+.all .count .group h5 span {
+  font-family: 'Arial-BoldMT','Î¢ÈíÑÅºÚ'  ,'Microsoft YaHei',  'Arial Bold', 'Arial';
+  font-weight: 700;
+  color: #FF0000;
+  font-size: 26px;
+}
+.all .count .group ul li {
+  width: 273px;
+  margin-bottom: 20px;
+  float: left;
+  height: 220px;
+  overflow: hidden;
+  background: #F5F5F5;
+  text-align: center;
+}
+.all .count .group ul li h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.all .count .group ul li p {
+  font-size: 16px;
+  color: #969696;
+  line-height: 26px;
+}
+.all .count .group ul li p span {
+  color: #F3A05E;
+}
+.all .count .flow h5 {
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+}
+.all .count .flow h5 span {
+  font-family: 'Arial-BoldMT','Î¢ÈíÑÅºÚ'  ,'Microsoft YaHei',  'Arial Bold', 'Arial';
+  font-weight: 700;
+  color: #FF0000;
+  font-size: 26px;
+}
+.all .count .certificate h5 {
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  margin:20px 0 17px 0;
+}
+.all .count .certificate h5 span {
+  font-family: 'Arial-BoldMT','Î¢ÈíÑÅºÚ'  ,'Microsoft YaHei',  'Arial Bold', 'Arial';
+  font-weight: 700;
+  color: #FF0000;
+  font-size: 26px;
+
+}
+.lc1{
+  width: 156px;
+  height: 188px;
+  text-align: center;
+  border: 1px solid #F5F5F5;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.lc1 img{
+  margin: 16px 0;
+}
+.lc1 h4{
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.lc1 p{
+  color: #969696;
+line-height: 20px;
+}
+.tu1{
+  width: 57px;
+  height: 190px;
+  text-align: center;
+  line-height: 190px;
+}
+.tu1 img{
+  width: 50px;
+}
+.flow  li{
+  float: left;
+  margin-top: 20px;
+}
+.ServiceModel h5{
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  margin:18px 0 9px 0;
+}
+.ServiceModel h5 span {
+  font-family: 'Arial-BoldMT','Î¢ÈíÑÅºÚ'  ,'Microsoft YaHei',  'Arial Bold', 'Arial';
+  font-weight: 700;
+  color: #FF0000;
+  font-size: 26px;
+
+}
+.Model{
+  width:860px ;
+  height:280px ;
+  background:url('../images/FlowChart.png') no-repeat  center center;
+}
+.Model_l{
+  width: 255px;
+  height: 280px;
+
+}
+.Model_m{
+  width: 351px;
+  height: 280px;
+  text-align: center;
+  font-size: 18px;
+  color: #e6c405;
+
+}
+.Model_r{
+  width: 241px;
+  height: 280px;
+  padding-left: 10px;
+
+}
+.Model ul{
+  float: left;
+
+}
+.Model h6{
+ font-size: 16px;
+  color: #666666;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.Model p{
+  font-size: 14px;
+  color: #969696;
+  line-height: 24px;
+}
+.Model_l h6{
+  text-align: right;
+}
+.Model_l p{
+  margin-left: 48px;
+}
+.m_de1{
+  margin-top:10px ;
+}
+.m_de2{
+  margin-top:30px ;
+}
+.m_de3{
+  margin-top:15px ;
+}
+.m_de5{
+  margin-top:10px ;
+}
+.m_de6{
+  margin-top:30px ;
+}
+.m_de7{
+   margin-top:40px ;
+ }
+.m_de4{
+  margin-top:120px ;
+}
+.sales h5{
+  height: 87px;
+  line-height: 87px;
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  margin:37px 0 18px 0;
+}
+.sales h5 span {
+  font-family: 'Arial-BoldMT','Î¢ÈíÑÅºÚ'  ,'Microsoft YaHei',  'Arial Bold', 'Arial';
+  font-weight: 700;
+  color: #FF0000;
+  font-size: 26px;
+
+}
+.sales li{
+  width: 380px;
+  float: left;
+  margin-left: 33.3px;
+}
+.top_sales li{
+  height: 700px;
+}
+.bottom_sales li{
+  height: 530px;
+}
+.sales h4{
+  font-size: 26px;
+  color: #666666;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+.sales p{
+  font-size: 16px;
+  color: #969696;
+  line-height: 30px;
+
+}
+.D_name{
+  display: inline-block;
+}

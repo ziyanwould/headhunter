@@ -1,0 +1,72 @@
+@import "compass/reset";
+@import "compass/css3";
+*{
+  box-sizing: initial;
+}
+a{
+  text-decoration: none!important;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+html,body,.all{
+  width: 100%;
+  height: 100%;
+  font-family:'Microsoft YaHei' ;
+  background: url(../images/bg.gif) ;
+
+}
+#logo{
+  width: 91px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+.count {
+  width: 400px;
+  margin: 0 auto;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left:-200px;
+  margin-top:-257.07px;
+  form{
+    padding-top: 5px;
+    display: block;
+    width: 380px;
+    height:276px;
+    margin: 0 auto;
+    background: #F6F6F6;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    input,button{
+      margin-top: 10px;
+      display: block;
+      width: 274px;
+    }
+    .form-group{
+      label{
+        font-size: 14px;
+      }
+      width: 302px;
+      margin: 0 auto;
+      padding-top: 20px;
+
+    }
+
+  }
+  P{
+    font-size: 12px;
+    font-family: 'ArialMT', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 160px;
+    color: #CCCCCC;
+  }
+}

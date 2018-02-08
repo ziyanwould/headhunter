@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "title2";
+    src: url("title2.eot"); /* IE9 */
+    src: url("title2.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("title2.woff") format("woff"), /* chrome、firefox */
+    url("title2.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("title2.svg#title2") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "FZSTK";
+    src: url("FZSTK.eot"); /* IE9 */
+    src: url("FZSTK.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("FZSTK.woff") format("woff"), /* chrome、firefox */
+    url("FZSTK.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("FZSTK.svg#FZSTK") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

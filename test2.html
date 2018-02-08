@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>改变图片</title>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script>
+			function chg(e) {
+				var $img = $(e.srcElement || e.target);			//添加对 IE的支持，并封装为JQuery对象
+				if($img.attr("class")!="pic")
+					return;
+				if($img.width()==200) {							//根据图片大小调整
+					$img.width("250px");
+					$img.height("250px");
+				} else {
+					$img.width("200px");
+					$img.height("200px");
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="imgs" onclick="chg(event);">			<!--通过事件冒泡机制处理div中的图片-->
+			<img src="images/charter.png" class="pic"/>
+			<img src="images/charter.png" class="pic"/>
+			<img src="images/charter.png" class="pic"/>
+		</div>
+	</body>
+</html>

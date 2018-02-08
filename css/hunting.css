@@ -1,0 +1,417 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+html, body, .all {
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+
+a {
+  text-decoration: none;
+}
+
+.flexslider {
+  margin: 0px auto 13.75px;
+  position: relative;
+  width: 100%;
+  height: 405px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.flexslider img {
+  width: 100%;
+  height: 100%;
+  background-size: 100px 200px;
+}
+
+.zone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*z-index:9;*/
+}
+
+.zone1 {
+  position: relative;
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.flexslider .slides li {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.flex-direction-nav a {
+  width: 45px;
+  height: 70px;
+  line-height: 99em;
+  overflow: hidden;
+  margin: -35px 0 0;
+  display: block;
+  background: url(../images/ad_ctr.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all .3s ease;
+  /*border-radius: 35px;*/
+}
+
+.flex-direction-nav .flex-next {
+  background-position: 0 -70px;
+  right: 0px;
+  padding-right: 0px;
+}
+
+.flex-direction-nav .flex-prev {
+  left: 230px;
+}
+
+.flexslider:hover .flex-next {
+  opacity: 0.8;
+  filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-prev {
+  opacity: 0.8;
+  filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+  opacity: 1;
+  filter: alpha(opacity=50);
+}
+
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 31px;
+  text-align: center;
+  right: 0px;
+  z-index: 15;
+}
+
+.flex-control-nav li {
+  margin: 0 10px;
+  display: inline-block;
+  zoom: 1;
+}
+
+.flex-control-paging li a {
+  /*background: url(../images/dot.png) no-repeat 0 -16px;*/
+  /*background-color: #e2e2e2;
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  text-indent: -99em;
+  width: 20px;*/
+  display: inline-block;
+  border: 2px solid #FFF;
+  width: 18px;
+  height: 18px;
+  border-radius: 13px;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+  /*background-position: 0 0;*/
+  background: #fff;
+  border: 2px solid #fe9276;
+}
+
+.flexslider .slides a img {
+  width: 1920px;
+  height: 405px;
+  display: block;
+  margin: 0 auto;
+}
+
+.case {
+  height: 259px;
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.case_box {
+  position: relative;
+  margin: 43px auto 0px;
+  width: 1200px;
+  height: 170px;
+  overflow: hidden;
+}
+
+.case_box ul {
+  position: absolute;
+  height: 257px;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.case_box ul li {
+  width: 1200px;
+  float: left;
+  height: 470px;
+}
+
+.case_box ol {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -65px;
+  height: 12px;
+  z-index: 99;
+}
+
+.case_box ol li {
+  float: left;
+  margin: 0 4px;
+  display: inline;
+  width: 12px;
+  height: 12px;
+  line-height: 999em;
+  background: url(../images/pagination.png) no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.case_box ol li.active {
+  background-position: 0 -12px;
+}
+
+.h_first {
+  width: 1200px;
+  margin: 0 auto;
+  height: 109px;
+}
+
+.f_right {
+  float: right;
+}
+
+.f_left {
+  margin-top: 20px;
+}
+.f_left span {
+  display: block;
+  font-size: 12px;
+  color: #333;
+  margin-top: 22px;
+  line-height: 25px;
+  margin-left: 12px;
+}
+.f_left img, .f_left span {
+  float: left;
+}
+.f_left em {
+  color: #3ebee6;
+}
+
+.f_right {
+  margin-top: 21px;
+}
+.f_right .soso {
+  display: inline-block;
+  width: 70px;
+  margin: 0 21px;
+  color: #000;
+  text-align: center;
+  line-height: 37px;
+}
+.f_right .active {
+  color: red;
+  border-bottom: 1px solid red;
+}
+.f_right img {
+  display: inline-block;
+  margin-left: 97px;
+  position: relative;
+  top: 5px;
+}
+.f_right .lo {
+  color: #333;
+  margin: 0 8px;
+}
+
+.h_third {
+  width: 1200px;
+  margin: 0 auto;
+}
+.h_third ul {
+  padding-top: 16px;
+  padding-bottom: 34px;
+}
+.h_third li a span {
+  display: block;
+  color: #666666;
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 22px;
+  margin-right: 37px;
+}
+.h_third li a img, .h_third li a span {
+  float: left;
+}
+
+.talents {
+  width: 100%;
+  background: #F4F4F4;
+  position: relative;
+}
+.talents .active {
+  background: #FC0219;
+  border: 1px solid #FC0219;
+}
+.talents .active a {
+  color: #FFFFFF !important;
+}
+.talents .r_dh {
+  position: absolute;
+  right: 0;
+}
+.talents .rc {
+  width: 1224px;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 49px;
+}
+.talents .rc li a {
+  display: block;
+  width: 90px;
+  height: 208px;
+  background: #FFFFFF;
+  float: left;
+  margin: 0 12px;
+  padding: 0 45px;
+  font-size: 12px;
+  text-align: center;
+  color: #666666;
+}
+.talents .rc li a img {
+  padding: 20px 0;
+}
+.talents .rc li a h4 {
+  font-size: 14px;
+}
+.talents .rc li a h3, .talents .rc li a h4, .talents .rc li a p {
+  padding-bottom: 10px;
+}
+.talents h2 {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+.talents h2 a {
+  float: right;
+  font-size: 12px;
+  color: #666666;
+}
+.talents .dh {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.talents .dh ul {
+  width: 1150px;
+  float: left;
+}
+.talents .dh .sdh li {
+  float: left;
+  min-width: 70px;
+  text-align: center;
+  padding: 6px 10px;
+  border: 1px solid #CDD3D0;
+  margin-right: 8px;
+}
+.talents .dh .sdh li a {
+  font-size: 14px;
+  color: #000000;
+}
+.talents .dh .tdh {
+  padding-top: 10px;
+  padding-left: 100px;
+}
+.talents .dh .tdh li {
+  float: left;
+  min-width: 70px;
+  text-align: center;
+  padding: 6px 10px;
+  margin-right: 8px;
+}
+.talents .dh .tdh li a {
+  font-size: 14px;
+  color: #000000;
+}
