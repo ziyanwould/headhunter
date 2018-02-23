@@ -235,14 +235,14 @@ table td, table th{
     right: 0;
 
   }
-  span{
+  .glyphicon{
     position: absolute;
 
     z-index: 1;
     top: 50%;
     margin-top: -10px;
     font-size: 20px;
-    right: 10px;
+    right: 20px;
 
   }
 }
@@ -462,4 +462,56 @@ table td, table th{
   left: 50%;
   margin-left: -25%;
   z-index: 999;
+}
+
+.padding_top{
+  margin-top: 130px;
+  .select{
+    position: absolute;
+    min-width: 300px;
+    height: 72px;
+    top: 0;
+    .titles{
+      padding-top: 10px;
+    }
+    .titles,.dropdown{
+      float: left;
+     display: block;margin: 12px 6px ;
+
+    }
+    .dh{
+      font-size: 14px;
+      line-height: 72px;
+    }
+    .active{
+      color: red;
+      transition: all .3s ease-in-out;
+    }
+
+
+  }
+}
+.style{
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.style.isChange{
+   border: 1px solid #FE990B;
+   color: #FE990B ;
+ }
+.style.isMove{
+  border: 1px solid red;
+  color: red;
+}
+.style.isTop{
+  color: #0AB591;
+  border: 1px solid #0AB591;
+}
+.style.isTop.active{
+  background: #0AB591;
+  color: white;
+  transition: all .3s ease-in-out;
 }

@@ -46,7 +46,9 @@
                      <dd><a href="javascript:;">全职简历管理</a></dd>
                      <dt><span class="glyphicon glyphicon glyphicon-triangle-bottom"></span>职位管理</dt>
                      <dd><a href="javascript:;">兼职职位管理</a></dd>
-                     <dd><a href="javascript:;">企业职位管理</a></dd>
+                     <dd><a href="javascript:;">全职职位管理</a></dd>
+                     <dt><span class="glyphicon glyphicon glyphicon-triangle-bottom"></span>新闻管理</dt>
+                     <dd><a href="javascript:;">新闻管理</a></dd>
                  </dl>
 
              </div>
@@ -103,7 +105,56 @@
              </div>
              <!--兼职简历管理-->
              <div class="count  val1">
-                 <div class="form-group">
+
+                 <div class="form-group examine padding_top" >
+
+                   <div class="select">
+                      <span class="titles">筛选：</span>
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                               <em>选择时间</em>
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                               <li><a href="#">全部时间</a></li>
+                               <li><a href="#">今天</a></li>
+                               <li><a href="#">昨天</a></li>
+                               <li><a href="#">最近三天</a></li>
+                               <li><a href="#">最近一个月</a></li>
+                           </ul>
+                       </div>
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                               <em>选择发布者</em>
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                               <li><a href="#">全部发布者</a></li>
+                               <li><a href="#">曹福利</a></li>
+                               <li><a href="#">胡宇</a></li>
+                               <li><a href="#">吕淑誾</a></li>
+                               <li><a href="#">苏兆明</a></li>
+                               <li><a href="#">吴林曼</a></li>
+
+                           </ul>
+                       </div>
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                               <em>选择分配状态</em>
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                               <li><a href="#">全部状态</a></li>
+                               <li><a href="#">等待分配</a></li>
+                               <li><a href="#">等待审核</a></li>
+                               <li><a href="#">通过</a></li>
+                               <li><a href="#">不通过</a></li>
+                           </ul>
+                       </div>
+
+                   </div>
+
+
                      <input type="text" class="form-control" placeholder="请输入简历编号、姓名进行搜索">
                      <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                  </div>
@@ -131,6 +182,11 @@
                              <th>工作经验</th>
                              <th>社保所在地</th>
                              <th>职称</th>
+                             <th>猎聘豆</th>
+                             <th>审核状态</th>
+                             <th>审核人员</th>
+                             <th>审核时间</th>
+                             <th>操作</th>
                          </tr>
                          </thead>
                          <tbody>
@@ -152,6 +208,16 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>10个</td>
+                             <td>等待分配</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
+
+
 
                          </tr>
                          <tr>
@@ -172,6 +238,13 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>200个</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+
+                             </td>
 
                          </tr>
                          <tr>
@@ -192,6 +265,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>通过</td>
+                             <td>吴林曼</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -212,6 +293,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -232,6 +321,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -252,6 +349,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -272,6 +377,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -292,6 +405,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -312,6 +433,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
@@ -332,6 +461,14 @@
                              <td>工作经验</td>
                              <td>社保所在地</td>
                              <td>职称</td>
+                             <td>50个</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;">修改</a>
+                                 <a href="javascript:;">删除</a>
+                             </td>
 
                          </tr>
 
@@ -357,7 +494,55 @@
              </div>
              <!--全职简历管理-->
              <div class="count  val2">
-                 <div class="form-group">
+                 <div class="form-group examine padding_top" >
+
+                     <div class="select">
+                         <span class="titles">筛选：</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择时间</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部时间</a></li>
+                                 <li><a href="#">今天</a></li>
+                                 <li><a href="#">昨天</a></li>
+                                 <li><a href="#">最近三天</a></li>
+                                 <li><a href="#">最近一个月</a></li>
+                             </ul>
+                         </div>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择发布者</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部发布者</a></li>
+                                 <li><a href="#">曹福利</a></li>
+                                 <li><a href="#">胡宇</a></li>
+                                 <li><a href="#">吕淑誾</a></li>
+                                 <li><a href="#">苏兆明</a></li>
+                                 <li><a href="#">吴林曼</a></li>
+
+                             </ul>
+                         </div>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择分配状态</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部状态</a></li>
+                                 <li><a href="#">等待分配</a></li>
+                                 <li><a href="#">等待审核</a></li>
+                                 <li><a href="#">通过</a></li>
+                                 <li><a href="#">不通过</a></li>
+                             </ul>
+                         </div>
+
+                     </div>
+
+
                      <input type="text" class="form-control" placeholder="请输入简历编号、姓名进行搜索">
                      <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                  </div>
@@ -378,6 +563,10 @@
                              <th>工作经验</th>
                              <th>现居住地</th>
                              <th>查看更多</th>
+                             <th>审核状态</th>
+                             <th>审核人员</th>
+                             <th>审核时间</th>
+                             <th>操作</th>
 
                          </tr>
                          </thead>
@@ -393,6 +582,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待分配</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -405,6 +601,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>通过</td>
+                             <td>吴林曼</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -417,6 +620,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -429,6 +639,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -441,6 +658,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -453,6 +677,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -465,6 +696,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -477,6 +715,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -489,6 +734,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -501,6 +753,13 @@
                              <td>工作经验</td>
                              <td>广东省-广州市-海珠区</td>
                              <td><a href="hr_de.html" target="_blank" ><img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
 
                          </tbody>
@@ -528,7 +787,55 @@
              </div>
              <!--兼职职位管理-->
              <div class="count  val4">
-                 <div class="form-group">
+                 <div class="form-group examine padding_top" >
+
+                     <div class="select">
+                         <span class="titles">筛选：</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择时间</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部时间</a></li>
+                                 <li><a href="#">今天</a></li>
+                                 <li><a href="#">昨天</a></li>
+                                 <li><a href="#">最近三天</a></li>
+                                 <li><a href="#">最近一个月</a></li>
+                             </ul>
+                         </div>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择发布者</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部发布者</a></li>
+                                 <li><a href="#">曹福利</a></li>
+                                 <li><a href="#">胡宇</a></li>
+                                 <li><a href="#">吕淑誾</a></li>
+                                 <li><a href="#">苏兆明</a></li>
+                                 <li><a href="#">吴林曼</a></li>
+
+                             </ul>
+                         </div>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择分配状态</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部状态</a></li>
+                                 <li><a href="#">等待分配</a></li>
+                                 <li><a href="#">等待审核</a></li>
+                                 <li><a href="#">通过</a></li>
+                                 <li><a href="#">不通过</a></li>
+                             </ul>
+                         </div>
+
+                     </div>
+
+
                      <input type="text" class="form-control" placeholder="请输入简历编号、姓名进行搜索">
                      <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                  </div>
@@ -550,6 +857,10 @@
                              <th>注册情况</th>
                              <th>证书状态</th>
                              <th>证书用途</th>
+                             <th>审核状态</th>
+                             <th>审核人员</th>
+                             <th>审核时间</th>
+                             <th>操作</th>
 
                          </tr>
                          </thead>
@@ -566,6 +877,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待分配</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -579,6 +897,15 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>通过</td>
+                             <td>吴林曼</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
+
+
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -592,6 +919,14 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
+
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -605,6 +940,14 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
+
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -618,6 +961,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -631,6 +981,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -644,6 +1001,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -657,6 +1021,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -670,6 +1041,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
@@ -683,6 +1061,13 @@
                              <td>注册情况</td>
                              <td>证书状态</td>
                              <td>证书状态</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
                          </tr>
 
 
@@ -708,7 +1093,55 @@
              </div>
              <!--企业职位管理-->
              <div class="count  val5">
-                 <div class="form-group">
+                 <div class="form-group examine padding_top" >
+
+                     <div class="select">
+                         <span class="titles">筛选：</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择时间</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部时间</a></li>
+                                 <li><a href="#">今天</a></li>
+                                 <li><a href="#">昨天</a></li>
+                                 <li><a href="#">最近三天</a></li>
+                                 <li><a href="#">最近一个月</a></li>
+                             </ul>
+                         </div>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择发布者</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部发布者</a></li>
+                                 <li><a href="#">曹福利</a></li>
+                                 <li><a href="#">胡宇</a></li>
+                                 <li><a href="#">吕淑誾</a></li>
+                                 <li><a href="#">苏兆明</a></li>
+                                 <li><a href="#">吴林曼</a></li>
+
+                             </ul>
+                         </div>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>选择分配状态</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">全部状态</a></li>
+                                 <li><a href="#">等待分配</a></li>
+                                 <li><a href="#">等待审核</a></li>
+                                 <li><a href="#">通过</a></li>
+                                 <li><a href="#">不通过</a></li>
+                             </ul>
+                         </div>
+
+                     </div>
+
+
                      <input type="text" class="form-control" placeholder="请输入简历编号、姓名进行搜索">
                      <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                  </div>
@@ -721,15 +1154,22 @@
                          <tr>
                              <th>职位编号</th>
                              <th>更新时间</th>
-                             <th>企业名称</th>
+                             <th>发布者</th>
                              <th>标题</th>
                              <th>岗位类别</th>
+                             <th>职位说明</th>
+                             <th>企业名称</th>
                              <th>工作地区</th>
                              <th>职位薪资</th>
                              <th>工作经验</th>
                              <th>学历要求</th>
                              <th>招聘人数</th>
-                             <th>职位说明</th>
+                             <th>审核状态</th>
+                             <th>审核人员</th>
+                             <th>审核时间</th>
+                             <th>操作</th>
+
+
 
                          </tr>
                          </thead>
@@ -737,163 +1177,435 @@
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>等待分配</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>通过</td>
+                             <td>吴林曼</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>胡宇</td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <a href="javascript:;" class="isChange">修改</a>
+                                 <a href="javascript:;" class="isMove">删除</a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
                          <tr>
                              <td>jzrc201708021442</td>
                              <td>2017-08-310 9:32:55 </td>
-                             <td>广东中住七一网络科技有限公司</td>
+                             <td>曹富丽</td>
                              <td>广州某知名企业寻环保工程类 - 给排水工程师挂资质</td>
-                             <td>光伏/太阳能/光电类 - 变压工程起</td>
-                             <td>广东省-广州市-海珠区</td>
-                             <td>区间</td>
-                             <td>3年以上</td>
-                             <td>大专</td>
-                             <td>3人</td>
+                             <td>环保工程类 - 给排水工程师</td>
                              <td><a href="javascript:;" data-val="1、在项目经理的领导下，制定落实项目安全防范措施；2、做好项目部新进职工的登记注册工作，发放安全教育卡片、安全帽和其他劳保用品；3、每项工程必须按公司规定组织安全教育、安全技术交底及安全措施的培训等；4、认真做好安全台账，组织安全生产检查；5、对工程重点部位要制定书面安全措施；6、发现重大安全隐患，应立即采取有效补救措施并及时汇报，将隐患消灭在萌芽状态；7、严格履行职责，杜绝事故发生。"
                                     data-slide="1、市政、工程管理或土木工程相关专业大专及以上学历 ，5年以上施工单位同岗位工作经验，具有注册安全工程师优先考虑； 2、对建筑施工的质量、安全和文明施工管理有深刻认识，负责工程现场施工质量、安全与文明施工管理工作，熟练运用CAD及其他计算机工作软件；3、能够掌握建筑规范和施工工序及技术要求，能读懂施工图并了解材料属性，了解施工及验收规范，熟悉相关施工程序和施工工艺；4、协调能力强，能承受一定的工作压力，能够按照公司既定战略开展工作，协调与建设单位、监理单位关系；5、身体健康，吃苦耐劳，常驻施工现场，敬业，人品佳，有良好的团队精神及管理能力；6、能服从公司统一安排。">
                                  <img src="./images/hr_show.png" width="20"> </a> </td>
+                             <td>企业名称</td>
+                             <td>广东省-广州市-海珠区</td>
+                             <td>职位薪资</td>
+                             <td>不限</td>
+                             <td>大专</td>
+                             <td>若干</td>
+                             <td>不通过</td>
+                             <td>等待审核</td>
+                             <td></td>
+                             <td></td>
+                             <td>
+                                 <a href="javascript:;" class="isChange"></a>
+                                 <a href="javascript:;" class="isMove"></a>
+                             </td>
 
                          </tr>
+
+
+
+
+                         </tbody>
+                     </table>
+                 </div>
+                 <nav aria-label="...">
+                     <ul class="pagination">
+                         <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                         <li><a href="#">2</a></li>
+                         <li><a href="#">3</a></li>
+                         <li><a href="#">4</a></li>
+                         <li><a href="#">5</a></li>
+                         <li>
+                             <a href="#" aria-label="Next">
+                                 <span aria-hidden="true">&raquo;</span>
+                             </a>
+                         </li>
+                     </ul>
+                 </nav>
+                 <p class="bottom">Copyright © 2014 www.zhongzhu71.com 版权所有 粤ICP备15046934号</p>
+             </div>
+             <!--对应父菜单 赋值无值空标签-->
+             <div class="count  val6">
+             </div>
+
+             <div class="count  val7">
+                 <div class="form-group examine padding_top" >
+
+                     <div class="select">
+                      <a href="javascript:;" class="dh active">全部</a>
+                      <a href="javascript:;" class="dh">活动信息</a>
+                      <a href="javascript:;" class="dh">平台动态</a>
+                      <a href="javascript:;" class="dh">行业资讯</a>
+
+
+                     </div>
+
+
+                     <input type="text" class="form-control" placeholder="请输入简历编号、姓名进行搜索">
+                     <a href="javascript:;"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                 </div>
+                 <div class="table-responsive " >
+                     <table class="table table-hover table-bordered">
+                         <caption>
+
+                         </caption>
+                         <thead>
+                         <tr>
+                             <th>新闻标题</th>
+                             <th>栏目</th>
+                             <th>发布者</th>
+                             <th>发布时间</th>
+                             <th>操作</th>
+
+
+
+
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>百城房价收入比 你所在的城市购房难度大吗</td>
+                             <td>平台动态</td>
+                             <td>曹富丽</td>
+                             <td>2017-08-31  09:32:55 </td>
+                             <td>
+                                 <a href="javascript:;" class="isChange style">修改</a>
+                                 <a href="javascript:;" class="isMove style">删除</a>
+                                 <a href="javascript:;" class="isTop style">置顶</a>
+                             </td>
+
+                         </tr>
+
+
 
 
 
@@ -3987,7 +4699,13 @@
     var numbers = 0;
     $(function () {
         $("[data-toggle='tooltip']").tooltip();/*启动提示*/
+        $('.dropdown-toggle').dropdown();/*启动下拉*/
 
+
+        click_s();
+        click_dh();
+        click_top();
+        click_delete();
 
         /*/情况说明/*/
         $('.exp a').click(function () {
@@ -4200,6 +4918,8 @@
                if( self==="确定" || self==="取消"){
 
 
+
+
                    if(gdp==="“审核通过”" && self==="确定"){
                        x_remove().closest('tr').remove();
                        setTimeout(function () {
@@ -4217,6 +4937,18 @@
                    }else if(gdp==="“审核不通过”" && self==="取消"){
                        setTimeout(function () {
                            alert_x("失败！您撤销对信息完成审核不通过操作。","alert-warning",3000)
+                       },500)
+                   }
+
+                   /*对删除进行操作*/
+                   else if(gdp==="“删除”" && self==="取消"){
+                       setTimeout(function () {
+                           alert_x("失败！您撤销对信息“删除”操作。","alert-warning",3000)
+                       },500)
+                   }else if(gdp==="“删除”" && self==="确定"){
+                       x_remove().closest('tr').remove();
+                       setTimeout(function () {
+                           alert_x("成功！您对信息完成“删除”操作","alert-success",3000)
                        },500)
                    }
 
@@ -4335,6 +5067,48 @@
          }else {
              return self;
          }
+     }
+
+     /**/
+     function click_s() {
+         $('.dropdown-menu a').click(function () {
+           var xcf = $(this).html();
+           var par = $(this).closest('.dropdown').find('.btn ').find('em');
+           par.html(xcf);
+         })
+     }
+     /**/
+     function click_dh() {
+         $('.select .dh').click(function () {
+             $(this).addClass('active').siblings().removeClass('active')
+         })
+     }
+     /**/
+     function click_top() {
+         $('.isTop').click(function () {
+             var pd =   $(this).html();
+             if(pd ==="置顶"){
+                 $(this).html("取消置顶").addClass('active')
+             }else {
+                 $(this).html("置顶").removeClass('active')
+             }
+
+         })
+     }
+     
+     /**/
+     function click_delete() {
+         $('.isMove').click(function () {
+             var arr = [];
+             arr['title'] = '确认操作';
+             arr['count'] = '确实要对当前选中的信息进行  <a href="javascript:;" style="color: red">“删除”</a> 的操作？';
+             arr['btn_left'] = '取消';
+             arr['btn_right'] = '确定';
+//           arr['se_arr']=["请选择......","胡宇","苏兆明","曹福莉","鲁肃","刘备","张飞","关羽"];
+             var _this = $(this);
+             x_remove(_this);
+             chang_info(arr);
+         })
      }
 </script>
 </body>
