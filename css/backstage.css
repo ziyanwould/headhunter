@@ -62,7 +62,7 @@ a {
   text-decoration: none !important;
 }
 
-.nun2, .nun3, .tn2 {
+.nun2, .nun3, .tn2, .nun4 {
   display: none;
 }
 
@@ -539,4 +539,57 @@ table td, table th {
   background: #0AB591;
   color: white;
   transition: all .3s ease-in-out;
+}
+
+.issue {
+  margin: 53px 50px 0 50px;
+}
+.issue h2 {
+  font-size: 14px;
+  padding-bottom: 14px;
+  color: #FB625B;
+  border-bottom: 2px solid #FB625B;
+  font-weight: 700;
+  padding-top: 37px;
+  margin-bottom: 8px;
+}
+.issue section {
+  padding: 20px 0;
+  font-size: 14px;
+}
+.issue section .i_padding {
+  width: 92px;
+}
+.issue section .i_title {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.issue section .i_title em {
+  position: relative;
+  top: 3px;
+  color: red;
+}
+.issue section .btn-long {
+  width: 208px !important;
+}
+.issue section .s_padding {
+  width: 20px;
+  text-align: center;
+}
+.issue section .i_title, .issue section .dropdown {
+  float: left;
+}
+.issue section .i_title .btn, .issue section .i_title .inputx, .issue section .dropdown .btn, .issue section .dropdown .inputx {
+  height: 26px;
+  width: 124px;
+}
+.issue section .i_title .inputl, .issue section .dropdown .inputl {
+  height: 26px;
+  width: 292px;
+}
+
+.area_f, .area_c {
+  max-height: 300px;
+  overflow-y: auto;
 }

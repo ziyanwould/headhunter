@@ -6,7 +6,7 @@
 a{
   text-decoration: none!important;
 }
-.nun2,.nun3,.tn2{display: none}
+.nun2,.nun3,.tn2,.nun4{display: none}
 .val0,.val2,.val3,.val4,.val5,.val6,.val7,.val8,.val9,.val10,.val11,.val12{
   display: none;
 }
@@ -514,4 +514,58 @@ table td, table th{
   background: #0AB591;
   color: white;
   transition: all .3s ease-in-out;
+}
+
+.issue{
+  margin: 53px 50px 0 50px;
+  h2{
+    font-size: 14px;
+    padding-bottom: 14px;
+    color: #FB625B;
+    border-bottom: 2px solid #FB625B;
+    font-weight: 700;
+    padding-top: 37px;
+    margin-bottom: 8px;
+
+  }
+
+  section{
+    padding: 20px 0;
+    font-size: 14px;
+    .i_padding{
+      width: 92px;
+    }
+    .i_title{
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      em{
+        position: relative;
+        top: 3px;
+        color: red;
+      }
+    }
+    .btn-long{
+      width: 208px!important;
+    }
+    .s_padding{
+      width: 20px;
+      text-align: center;
+    }
+    .i_title,.dropdown{
+      .btn,.inputx{
+        height: 26px;
+        width: 124px;
+      }
+      .inputl{
+        height: 26px;
+        width: 292px;
+      }
+      float: left;
+    }
+  }
+}
+.area_f,.area_c{
+  max-height: 300px;
+  overflow-y: auto;
 }
