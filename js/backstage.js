@@ -13,6 +13,7 @@ $(function () {
     click_top();
     click_delete();
     area_city();
+    click_judge();
 
     /*/情况说明/*/
     $('.exp a').click(function () {
@@ -482,4 +483,73 @@ function area_city(you_city) {
         }
     });
 
+}
+
+/*发布管理发布判断函数*/
+
+function click_judge() {
+    $('.publish').click(function () {
+        /*设一个值*/
+        var i = 0;
+        var self = true;
+        var par = $(this).closest('.issue').find('section');
+
+
+
+       /*判断是否必选项*/
+        par.each(function(){
+             console.log("初始"+self);
+            var _this = $(this);
+            var val=_this.find('input[type="radio"]').prop('checked');
+            console.log("val值："+val)
+           if(_this.find('.i_title').find('em').length>0){
+               /*判断是否存在空值，或者下拉没选*/
+
+               if ( _this.find('input[type="text"]').val()==""){
+                   console.log("text:"+self);
+                   self = false;
+
+                  // return false;/*结束本次循环 return false; 终止所有循环*/
+
+
+               }
+               else if(_this.find('textarea').text()==""){
+                   console.log("textarea:"+self);
+                 //  self = false;
+                   console.log("textarea变化后:"+self);
+                 //  return false;/*结束所有循环*/
+
+               }
+               else  if(val){
+                   console.log("value:"+self);
+                   self = true;
+
+                  // return false;/*结束所有循环*/
+
+                   }
+               else {
+                       _this.find('.dropdown').each(function () {
+                           var  xval=$(this).find('.btn').find('em').html();
+                           console.log(xval);
+                           if(xval.indexOf("-")>0){
+                               console.log("select:"+self);
+                               self = false;
+                           }
+
+                       });
+                   }
+
+
+
+               console.log(""+_this.find(".i_title").eq(0).html()+"<br/>"+self+"");
+               console.log('<br/>');
+               }
+
+           });
+
+
+
+
+      /*判断是否存下拉与否 与 单选二存在一*/
+    })
 }
