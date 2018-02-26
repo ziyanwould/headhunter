@@ -22,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="backstage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="backstage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backstage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="4882" column="31" lean-forward="true" selection-start-line="4882" selection-start-column="31" selection-end-line="4882" selection-end-column="31" />
+            <state relative-caret-position="849">
+              <caret line="4906" column="23" lean-forward="true" selection-start-line="4906" selection-start-column="23" selection-end-line="4906" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -212,10 +212,13 @@
                 <element signature="n#style#0;n#span#2;n#section#11;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#section#12;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#section#13;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#1;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#2;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#section#15;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#span#2;n#section#15;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#265620#265626#0" expanded="true" />
+                <element signature="e#265634#265640#0" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#span#1;n#section#16;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -226,16 +229,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backstage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="backstage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/backstage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="508" column="45" lean-forward="true" selection-start-line="508" selection-start-column="45" selection-end-line="508" selection-end-column="45" />
+            <state relative-caret-position="6688">
+              <caret line="556" column="34" lean-forward="false" selection-start-line="556" selection-start-column="34" selection-end-line="556" selection-end-column="34" />
               <folding>
-                <element signature="e#71#10364#0" expanded="false" />
-                <element signature="e#328#431#0" expanded="false" />
-                <element signature="e#7511#7660#0" expanded="false" />
-                <element signature="e#7552#7641#0" expanded="false" />
+                <element signature="e#347#450#0" expanded="false" />
+                <element signature="e#7530#7679#0" expanded="false" />
+                <element signature="e#7571#7660#0" expanded="false" />
                 <element signature="n#!!block;n#chang_info#0" expanded="false" />
                 <element signature="n#!!block;n#bli#0" expanded="false" />
                 <element signature="n#!!block;n#alert_x#0" expanded="false" />
@@ -245,9 +247,12 @@
                 <element signature="n#!!block;n#click_top#0" expanded="false" />
                 <element signature="n#!!block;n#click_delete#0" expanded="false" />
                 <element signature="n#!!block;n#area_city#0" expanded="false" />
-                <marker date="1519551966254" expanded="true" signature="1344:1361" ph="..." />
-                <marker date="1519551966254" expanded="true" signature="11478:11485" ph="×" />
-                <marker date="1519551966254" expanded="true" signature="12754:12764" ph="..." />
+                <element signature="e#13226#14066#0" expanded="false" />
+                <element signature="e#14818#16212#0" expanded="false" />
+                <element signature="n#!!block;n#click_radio#0" expanded="false" />
+                <marker date="1519629083582" expanded="true" signature="1363:1380" ph="..." />
+                <marker date="1519629083582" expanded="true" signature="11497:11504" ph="×" />
+                <marker date="1519629083582" expanded="true" signature="12907:12917" ph="..." />
               </folding>
             </state>
           </provider>
@@ -256,7 +261,7 @@
       <file leaf-file-name="backstage.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/backstage.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="13325">
               <caret line="533" column="20" lean-forward="false" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="20" />
               <folding />
             </state>
@@ -310,8 +315,8 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/js/citys.json" />
         <option value="$PROJECT_DIR$/sass/backstage.scss" />
-        <option value="$PROJECT_DIR$/js/backstage.js" />
         <option value="$PROJECT_DIR$/backstage.html" />
+        <option value="$PROJECT_DIR$/js/backstage.js" />
       </list>
     </option>
   </component>
@@ -342,8 +347,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -529,14 +534,16 @@
       <workItem from="1519350633454" duration="22014000" />
       <workItem from="1519434820045" duration="25020000" />
       <workItem from="1519521657548" duration="25158000" />
+      <workItem from="1519606948370" duration="13020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410486000" />
+    <option name="totallyTimeSpent" value="423506000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16220029" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -848,41 +855,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/backstage.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="13325">
           <caret line="533" column="20" lean-forward="false" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/backstage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="508" column="45" lean-forward="true" selection-start-line="508" selection-start-column="45" selection-end-line="508" selection-end-column="45" />
-          <folding>
-            <element signature="e#71#10364#0" expanded="false" />
-            <element signature="e#328#431#0" expanded="false" />
-            <element signature="e#7511#7660#0" expanded="false" />
-            <element signature="e#7552#7641#0" expanded="false" />
-            <element signature="n#!!block;n#chang_info#0" expanded="false" />
-            <element signature="n#!!block;n#bli#0" expanded="false" />
-            <element signature="n#!!block;n#alert_x#0" expanded="false" />
-            <element signature="n#!!block;n#x_remove#0" expanded="false" />
-            <element signature="n#!!block;n#click_s#0" expanded="false" />
-            <element signature="n#!!block;n#click_dh#0" expanded="false" />
-            <element signature="n#!!block;n#click_top#0" expanded="false" />
-            <element signature="n#!!block;n#click_delete#0" expanded="false" />
-            <element signature="n#!!block;n#area_city#0" expanded="false" />
-            <marker date="1519551966254" expanded="true" signature="1344:1361" ph="..." />
-            <marker date="1519551966254" expanded="true" signature="11478:11485" ph="×" />
-            <marker date="1519551966254" expanded="true" signature="12754:12764" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="4882" column="31" lean-forward="true" selection-start-line="4882" selection-start-column="31" selection-end-line="4882" selection-end-column="31" />
+        <state relative-caret-position="849">
+          <caret line="4906" column="23" lean-forward="true" selection-start-line="4906" selection-start-column="23" selection-end-line="4906" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1068,15 +1050,45 @@
             <element signature="n#style#0;n#span#2;n#section#11;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#section#12;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#13;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#1;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#2;n#section#14;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#section#15;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#2;n#section#15;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#265620#265626#0" expanded="true" />
+            <element signature="e#265634#265640#0" expanded="true" />
             <element signature="n#style#0;n#button#0;n#span#1;n#section#16;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/backstage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6688">
+          <caret line="556" column="34" lean-forward="false" selection-start-line="556" selection-start-column="34" selection-end-line="556" selection-end-column="34" />
+          <folding>
+            <element signature="e#347#450#0" expanded="false" />
+            <element signature="e#7530#7679#0" expanded="false" />
+            <element signature="e#7571#7660#0" expanded="false" />
+            <element signature="n#!!block;n#chang_info#0" expanded="false" />
+            <element signature="n#!!block;n#bli#0" expanded="false" />
+            <element signature="n#!!block;n#alert_x#0" expanded="false" />
+            <element signature="n#!!block;n#x_remove#0" expanded="false" />
+            <element signature="n#!!block;n#click_s#0" expanded="false" />
+            <element signature="n#!!block;n#click_dh#0" expanded="false" />
+            <element signature="n#!!block;n#click_top#0" expanded="false" />
+            <element signature="n#!!block;n#click_delete#0" expanded="false" />
+            <element signature="n#!!block;n#area_city#0" expanded="false" />
+            <element signature="e#13226#14066#0" expanded="false" />
+            <element signature="e#14818#16212#0" expanded="false" />
+            <element signature="n#!!block;n#click_radio#0" expanded="false" />
+            <marker date="1519629083582" expanded="true" signature="1363:1380" ph="..." />
+            <marker date="1519629083582" expanded="true" signature="11497:11504" ph="×" />
+            <marker date="1519629083582" expanded="true" signature="12907:12917" ph="..." />
           </folding>
         </state>
       </provider>

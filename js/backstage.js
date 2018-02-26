@@ -14,6 +14,7 @@ $(function () {
     click_delete();
     area_city();
     click_judge();
+    click_radio();
 
     /*/情况说明/*/
     $('.exp a').click(function () {
@@ -390,7 +391,10 @@ function click_s() {
 
         if(obj.indexOf('area')>-1) {
             x_remove(_this);
-            area_city(xcf)
+            area_city(xcf);
+
+            /*若已经选中则选中取消*/
+            _this.closest('section').find('.i_title').find('input[type="radio"]').removeAttr('checked');
 
         }
 
@@ -456,7 +460,7 @@ function area_city(you_city) {
 
                 }
 
-               console.log(strs)
+
                 x_remove().closest('.issue').find(".area_c").html("").append(strs);
                 return false;
 
@@ -490,7 +494,7 @@ function area_city(you_city) {
 function click_judge() {
     $('.publish').click(function () {
         /*设一个值*/
-        var i = 0;
+
         var self = true;
         var par = $(this).closest('.issue').find('section');
 
@@ -498,41 +502,39 @@ function click_judge() {
 
        /*判断是否必选项*/
         par.each(function(){
-             console.log("初始"+self);
+             //console.log("初始"+self);
             var _this = $(this);
             var val=_this.find('input[type="radio"]').prop('checked');
-            console.log("val值："+val)
+           // console.log("val值："+val)
            if(_this.find('.i_title').find('em').length>0){
                /*判断是否存在空值，或者下拉没选*/
 
                if ( _this.find('input[type="text"]').val()==""){
-                   console.log("text:"+self);
+                   //console.log("text:"+self);
                    self = false;
 
                   // return false;/*结束本次循环 return false; 终止所有循环*/
 
 
                }
-               else if(_this.find('textarea').text()==""){
-                   console.log("textarea:"+self);
-                 //  self = false;
-                   console.log("textarea变化后:"+self);
+               else if(_this.find('.form-control').val()==""){
+                   //console.log(_this.html());
+
+                   self = false;
+                   //console.log("textarea变化后:"+self);
                  //  return false;/*结束所有循环*/
 
                }
-               else  if(val){
-                   console.log("value:"+self);
-                   self = true;
 
-                  // return false;/*结束所有循环*/
-
-                   }
                else {
+                   /*判断是否存下拉与否 与 单选二存在一*/
+                   if(!val)
                        _this.find('.dropdown').each(function () {
                            var  xval=$(this).find('.btn').find('em').html();
                            console.log(xval);
-                           if(xval.indexOf("-")>0){
-                               console.log("select:"+self);
+
+                           if(xval.indexOf("-")==0){
+
                                self = false;
                            }
 
@@ -541,15 +543,52 @@ function click_judge() {
 
 
 
-               console.log(""+_this.find(".i_title").eq(0).html()+"<br/>"+self+"");
-               console.log('<br/>');
+               // console.log(""+_this.find(".i_title").eq(0).html()+"<br/>"+self+"");
+               // console.log('<br/>');
                }
 
            });
 
+       /*得出页面是否能提交*/
+       setTimeout(function () {
+           if(self){
+               alert_x("成功！您成功发布了简历","alert-success",3000)
+           }else {
+               alert_x("失败！您的表单未填项，请检查后重新提交！","alert-danger",3000)
+           }
+       },200)
 
 
-
-      /*判断是否存下拉与否 与 单选二存在一*/
     })
+}
+
+/*单选按钮的可点击与社保的联动*/
+function click_radio() {
+
+    $('input[type="radio"]').click(function () {
+        var _this =$(this);
+        console.log($(this).attr('checked'));
+        if(_this.attr('checked')){
+
+            _this.removeAttr('checked');
+
+        }else{
+            _this.attr('checked','checked');
+            /*此radio用于社保的*/
+            var shebao =   _this.closest('section').find('.i_title').html();
+            console.log(shebao.indexOf("社保")+shebao);
+            if(shebao.indexOf("社保所在地")==0){
+                _this.closest('section').children('.dropdown').eq(0).find('em').html(" - 省 -");
+                _this.closest('section').children('.dropdown').eq(1).find('em').html(" - 市 -");
+            }
+
+
+
+        }
+    });
+
+
+
+
+
 }
