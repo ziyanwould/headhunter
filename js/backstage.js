@@ -15,6 +15,7 @@ $(function () {
     area_city();
     click_judge();
     click_radio();
+    click_remve();
 
     /*/情况说明/*/
     $('.exp a').click(function () {
@@ -591,4 +592,15 @@ function click_radio() {
 
 
 
+}
+
+/*清空内容*/
+function click_remve() {
+    $('.btn_remove').click(function () {
+        var _this = $(this);
+        var doing = _this.closest('.count').find('.table-responsive').find('tbody');
+        var do_height = doing.height();
+        console.log(do_height);
+        doing.html("").height(do_height);
+    })
 }

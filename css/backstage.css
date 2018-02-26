@@ -593,3 +593,54 @@ table td, table th {
   max-height: 300px;
   overflow-y: auto;
 }
+
+.sec_one {
+  margin: 90px 50px 0 50px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #999999;
+}
+.sec_one p {
+  height: 40px;
+  line-height: 40px;
+  color: #FB625B;
+  background: #E7EBEF;
+  padding-left: 30px;
+  font-size: 14px;
+}
+.sec_one p img {
+  padding: 0 10px;
+}
+.sec_one a.x_up {
+  display: block;
+  width: 112px;
+  height: 32px;
+  font-size: 14px;
+  color: #979797;
+  line-height: 34px;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.sec_two {
+  margin: 27px 50px 7px 50px;
+}
+.sec_two span {
+  font-size: 16px;
+  color: #FE6D60;
+  display: inline-block;
+  padding-bottom: 7px;
+  border-bottom: 2px solid crimson;
+}
+.sec_two em {
+  font-size: 12px;
+}
+
+.sec_thr {
+  margin: 27px 50px 27px 50px;
+}
+.sec_thr .btn {
+  float: right;
+  margin-left: 14px;
+}
