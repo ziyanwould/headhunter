@@ -588,6 +588,53 @@ table td, table th {
   height: 26px;
   width: 292px;
 }
+.issue section .input-append .add-on, .issue section .input-prepend .add-on {
+  display: inline-block;
+  width: auto;
+  height: 20px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+.issue section [class^="icon-"], .issue section [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../images/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+.issue section .add-on i, .issue section .input-prepend.date .add-on i, .issue section .input-group.date .input-group-addon span {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+.issue section input[readonly], .issue section select[readonly], .issue section textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+.issue section .icon-th {
+  background-position: -240px 0;
+}
+.issue section .icon-remove {
+  background-position: -312px 0;
+}
+.issue section .controls input, .issue section .controls span {
+  float: left;
+}
+.issue section .add-on {
+  height: 40px;
+}
 
 .area_f, .area_c {
   max-height: 300px;

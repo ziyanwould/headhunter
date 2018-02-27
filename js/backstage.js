@@ -7,6 +7,19 @@ $(function () {
     $('.dropdown-toggle').dropdown();/*启动下拉*/
 
 
+    //设置日期时间控件
+    $('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+
+
 
     click_s();
     click_dh();
@@ -390,13 +403,21 @@ function click_s() {
 
         var obj=$(this).closest('.dropdown-menu').attr("class");
 
-        if(obj.indexOf('area')>-1) {
+        if(obj.indexOf('area_f')>-1) {
             x_remove(_this);
+
             area_city(xcf);
 
             /*若已经选中则选中取消*/
             _this.closest('section').find('.i_title').find('input[type="radio"]').removeAttr('checked');
 
+        }else if(obj.indexOf('area_c')>-1){
+
+            var ddf = _this.closest('section').children('.dropdown').eq(0).find('em').html();
+
+            area_city(ddf,xcf,true);
+            /*若已经选中则选中取消*/
+            //_this.closest('section').find('.i_title').find('input[type="radio"]').removeAttr('checked');
         }
 
     })
@@ -438,8 +459,47 @@ function click_delete() {
 /**
  *
  */
-function area_city(you_city) {
+function area_city(you_city,are_city,df) {
+
+
     if(you_city){
+        if(df){
+
+        }else {
+            $.ajax({
+                type: "post",        //type：(string)请求方式，POST或GET
+                dataType: "json",    //dataType：(string)预期返回的数据类型。xml,html,json,text等
+                url: "js/citys.json",  //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
+                success: function (msg) {
+                    var  json = eval(msg.provinces);
+                    var strs = "";
+
+
+                    for (i in  json) {
+
+                        if (json[i].name==you_city){
+                            var jsons =json[i].city;
+                            for (j in  jsons) {
+                                strs += '  <li><a href="#">'+jsons[j].name+'</a></li>';
+
+                            }
+                        }
+
+                    }
+
+
+                    x_remove().closest('section').find(".area_c").html("").append(strs);
+                    x_remove().closest('section').children('.dropdown').eq(1).find('em').html(" - 市 -");
+
+
+
+                }
+            });
+        }
+
+    }
+     if(are_city){
+
         $.ajax({
             type: "post",        //type：(string)请求方式，POST或GET
             dataType: "json",    //dataType：(string)预期返回的数据类型。xml,html,json,text等
@@ -452,9 +512,19 @@ function area_city(you_city) {
                 for (i in  json) {
 
                     if (json[i].name==you_city){
-                       var jsons =json[i].citys;
+
+                        var jsons =json[i].city;
                         for (j in  jsons) {
-                            strs += '  <li><a href="#">'+jsons[j]+'</a></li>';
+
+                        if(jsons[j].name==are_city){
+                            var jsona = jsons[j].area;
+
+                            for( h in jsona){
+                                console.log(jsona[h]);
+                                 strs += '  <li><a href="#">'+jsona[h]+'</a></li>';
+                            }
+
+                        }
 
                         }
                     }
@@ -462,7 +532,8 @@ function area_city(you_city) {
                 }
 
 
-                x_remove().closest('.issue').find(".area_c").html("").append(strs);
+                x_remove().closest('section').find(".area_a").html("").append(strs);
+                x_remove().closest('section').children('.dropdown').eq(2).find('em').html(" - 区 -");
                 return false;
 
 
@@ -529,17 +600,22 @@ function click_judge() {
 
                else {
                    /*判断是否存下拉与否 与 单选二存在一*/
-                   if(!val)
+                   console.log(val);
+                   if(!val){
                        _this.find('.dropdown').each(function () {
                            var  xval=$(this).find('.btn').find('em').html();
                            console.log(xval);
-
-                           if(xval.indexOf("-")==0){
+                           console.log("索引值"+xval.indexOf("-"));
+                           if(xval.indexOf("-")==0 || xval.indexOf("-")==1){
 
                                self = false;
                            }
-
+                           console.log("最终："+ self)
                        });
+                   }else {
+                        return;
+                   }
+
                    }
 
 

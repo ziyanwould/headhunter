@@ -10,6 +10,9 @@
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/backstage.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -5187,6 +5190,514 @@
                  </div>
                  <p class="bottom">Copyright © 2014 www.zhongzhu71.com 版权所有 粤ICP备15046934号</p>
              </div>
+             <!--发布全职职位-->
+             <div class="count  val3">
+
+                 <div class="issue">
+                     <h2>基本资料</h2>
+                     <section class="clearfix">
+                         <span class="i_title i_padding">姓名<em>*</em></span>
+                         <span class="i_title ">
+                             <input type="text" class="form-control inputl" placeholder="">
+                         </span>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">性别<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">男</a></li>
+                                 <li><a href="#">女</a></li>
+                             </ul>
+                         </div>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">出生年月日</span>
+
+
+                             <div class="controls input-append date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                 <input size="16" type="text" style="width: 128px;" class="form-control inputl" value="" readonly="">
+                                 <span class="add-on"><i class="icon-remove"></i></span>
+                                 <span class="add-on"><i class="icon-th"></i></span>
+                             </div>
+                             <input type="hidden" id="dtp_input2" value=""><br>
+
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">工作经验</span>
+                         <span class="i_title ">
+                             <input type="text" class="form-control inputx" placeholder="">
+                         </span>
+                         <span class="i_title" style="font-size:14px;margin-left: 20px; ">
+                             年
+                         </span>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">学历<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">初中及以下</a></li>
+                                 <li><a href="#">高中</a></li>
+                                 <li><a href="#">中技</a></li>
+                                 <li><a href="#">中专</a></li>
+                                 <li><a href="#">大专</a></li>
+                                 <li><a href="#">本科</a></li>
+                                 <li><a href="#">硕士</a></li>
+                                 <li><a href="#">博士</a></li>
+                                 <li><a href="#">MBA</a></li>
+                             </ul>
+                         </div>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">职称<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">无</a></li>
+                                 <li><a href="#">初级</a></li>
+                                 <li><a href="#">中级</a></li>
+                                 <li><a href="#">高级</a></li>
+
+                             </ul>
+                         </div>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">手机号码<em>*</em></span>
+                         <span class="i_title ">
+                             <input type="text" class="form-control inputl" placeholder="">
+                         </span>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">现居住地<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 省 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu area_f" aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+                         <span class="i_title s_padding">-</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 市 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu area_c" aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+                         <span class="i_title s_padding">-</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 区 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu area_a" aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">社保所在地<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn_sb btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 省 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu area_f" aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+                         <span class="i_title s_padding">-</span>
+                         <div class="dropdown">
+                             <button class="btn btn_sb btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 市 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu area_c" aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+                         <span class="i_title" style="font-size:14px;margin-left: 20px; ">
+                             <input type="radio" name="shebao" value="right">
+                            无社保
+                         </span>
+
+                     </section>
+
+                     <h2>求职意见</h2>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">期望薪资<em>*</em></span>
+                         <span class="i_title ">
+                             <input type="text" class="form-control inputl" placeholder="">
+                         </span>
+                         <span class="i_title" style="font-size:14px;margin-left: 20px; ">
+                             元/年
+                         </span>
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">到岗时间<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">随时</a></li>
+                                 <li><a href="#">一个月内</a></li>
+                                 <li><a href="#">一个月后</a></li>
+                             </ul>
+                         </div>
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">职位类别<em>*</em></span>
+                         <div class="dropdown">
+                             <button class="btn btn-default btn-long dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">- 请选择 -</a></li>
+                                 <li><a href="#">引用我们目录的</a></li>
+                             </ul>
+
+                         </div>
+                         <span class="i_title s_padding">-</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default  btn-long dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">- 请选择 -</a></li>
+                                 <li><a href="#">引用我们目录的</a></li>
+                             </ul>
+
+                         </div>
+                     </section>
+
+                     <section class="clearfix" style="height: 134px;">
+                         <span class="i_title i_padding">自我评价</span>
+                         <span class="i_title ">
+                              <textarea class="form-control" rows="6" style="width: 735px;"></textarea>
+                         </span>
+
+                     </section>
+
+             <div class="experience " >
+                 <hgroup>
+                     <h2>工作经历（最近三项）</h2>
+                     <section class="clearfix">
+                         <span class="i_title i_padding">时间</span>
+                         <div class="dropdown">
+                             <button class="btn btn_sb btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+                         <span class="i_title s_padding">-</span>
+                         <div class="dropdown">
+                             <button class="btn btn_sb btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                             </ul>
+                         </div>
+
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">公司名称</span>
+                         <span class="i_title ">
+                   <input type="text"  class="form-control inputl" placeholder="">
+         </span>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding">职位</span>
+                         <div class="dropdown">
+                             <button class="btn btn-default btn-long dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 <em>- 请选择 -</em>
+                                 <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                 <li><a href="#">后台列表</a></li>
+
+                             </ul>
+                         </div>
+                     </section>
+
+                     <section class="clearfix" style="height: 134px;">
+                         <span class="i_title i_padding">项目描述</span>
+                         <span class="i_title ">
+              <textarea class="form-control" rows="6" style="width: 735px;"></textarea>
+         </span>
+
+                     </section>
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding"> &nbsp; </span>
+                         <span class="i_title ">
+             <button type="button"  class="btn btn_add btn-xs  btn-info">新增工作经验</button>
+
+         </span>
+
+
+                     </section>
+
+                 </hgroup>
+
+             </div>
+
+             <div class="project " >
+                <hgroup>
+                    <h2>项目经历（最近三项）</h2>
+                    <section class="clearfix">
+                        <span class="i_title i_padding">时间</span>
+                        <div class="dropdown">
+                            <button class="btn btn_sb btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 请选择 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                            </ul>
+                        </div>
+                        <span class="i_title s_padding">-</span>
+                        <div class="dropdown">
+                            <button class="btn btn_sb btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <em>- 请选择 -</em>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                            </ul>
+                        </div>
+
+
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding">项目名称</span>
+                        <span class="i_title ">
+                     <input type="text" style="width: 458px" class="form-control inputl" placeholder="">
+                 </span>
+
+                    </section>
+
+                    <section class="clearfix" style="height: 134px;">
+                        <span class="i_title i_padding">项目描述</span>
+                        <span class="i_title ">
+                      <textarea class="form-control" rows="6" style="width: 735px;"></textarea>
+                 </span>
+
+                    </section>
+
+                    <section class="clearfix">
+                        <span class="i_title i_padding"> &nbsp; </span>
+                        <span class="i_title ">
+                     <button type="button"  class="btn btn_add btn-xs  btn-info">新增项目经验</button>
+
+                 </span>
+
+
+                    </section>
+
+                </hgroup>
+
+            </div>
+
+             <div class="education " >
+                         <hgroup>
+                             <h2>教育经历（最近三项）</h2>
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">时间</span>
+                                 <div class="dropdown">
+                                     <button class="btn btn_sb btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                         <em>- 请选择 -</em>
+                                         <span class="caret"></span>
+                                     </button>
+                                     <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                                     </ul>
+                                 </div>
+                                 <span class="i_title s_padding">-</span>
+                                 <div class="dropdown">
+                                     <button class="btn btn_sb btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                         <em>- 请选择 -</em>
+                                         <span class="caret"></span>
+                                     </button>
+                                     <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                                     </ul>
+                                 </div>
+
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">学校名称</span>
+                                 <span class="i_title ">
+                                   <input type="text" class="form-control inputl" placeholder="">
+                                 </span>
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">专业</span>
+                                 <span class="i_title ">
+                                   <input type="text" class="form-control inputl" placeholder="">
+                                 </span>
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">学历</span>
+                                 <div class="dropdown">
+                                     <button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                         <em>- 请选择 -</em>
+                                         <span class="caret"></span>
+                                     </button>
+                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                         <li><a href="#">初中及以下</a></li>
+                                         <li><a href="#">高中</a></li>
+                                         <li><a href="#">中技</a></li>
+                                         <li><a href="#">中专</a></li>
+                                         <li><a href="#">大专</a></li>
+                                         <li><a href="#">本科</a></li>
+                                         <li><a href="#">硕士</a></li>
+                                         <li><a href="#">博士</a></li>
+                                         <li><a href="#">MBA</a></li>
+                                     </ul>
+                                 </div>
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding"> &nbsp; </span>
+                                 <span class="i_title ">
+                     <button type="button"  class="btn btn_add btn-xs  btn-info">新增教育经验</button>
+
+                 </span>
+
+
+                             </section>
+
+                         </hgroup>
+
+                     </div>
+
+             <div class="certificate " >
+                         <hgroup>
+                             <h2>证书信息（最近的三项）</h2>
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">时间</span>
+                                 <div class="dropdown">
+                                     <button class="btn btn_sb btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                         <em>- 请选择 -</em>
+                                         <span class="caret"></span>
+                                     </button>
+                                     <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                                     </ul>
+                                 </div>
+                                 <span class="i_title s_padding">-</span>
+                                 <div class="dropdown">
+                                     <button class="btn btn_sb btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                         <em>- 请选择 -</em>
+                                         <span class="caret"></span>
+                                     </button>
+                                     <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+
+                                     </ul>
+                                 </div>
+
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">证书名称</span>
+                                 <span class="i_title ">
+                                   <input type="text" class="form-control inputl" placeholder="">
+                                 </span>
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding">培训机构</span>
+                                 <span class="i_title ">
+                                   <input type="text" class="form-control inputl" placeholder="">
+                                 </span>
+
+                             </section>
+
+                             <section class="clearfix">
+                                 <span class="i_title i_padding"> &nbsp; </span>
+                                 <span class="i_title ">
+                     <button type="button"  class="btn btn_add btn-xs  btn-info">新增证书经验</button>
+
+                 </span>
+
+
+                             </section>
+
+                         </hgroup>
+
+                 </div>
+
+
+
+                     <section class="clearfix">
+                         <span class="i_title i_padding"> &nbsp; </span>
+                         <span class="i_title ">
+                             <button type="button" style="font-size: 16px;" class="btn publish btn-danger">发 布</button>
+
+                         </span>
+
+
+                     </section>
+
+                 </div>
+                 <p class="bottom">Copyright © 2014 www.zhongzhu71.com 版权所有 粤ICP备15046934号</p>
+             </div>
+
          </div>
 
          <div class="com_l3 t_n4">
@@ -5251,5 +5762,7 @@
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
  <script src="./js/bootstrap-magnify.min.js"></script>
  <script src="./js/backstage.js"></script>
+ <script src="js/bootstrap-datetimepicker.min.js"></script>
+ <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 </body>
 </html>
