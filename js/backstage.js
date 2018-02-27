@@ -2,11 +2,32 @@
  * Created by lbx on 2018/2/24.
  */
 var numbers = 0;
+var self = $(this);
 $(function () {
+
+    click_s();
+    click_dh();
+    click_top();
+    click_delete();
+    area_city();
+    click_judge();
+    click_radio();
+    click_remve();
+    bind_input();
+    click_clone();
+    child_remove();
+
     $("[data-toggle='tooltip']").tooltip();/*启动提示*/
     $('.dropdown-toggle').dropdown();/*启动下拉*/
 
 
+    //失去焦点
+    $("[data-toggle='popover']").popover({
+        trigger:"focus",    //如果设为focus 当按钮失去焦点提示层会消失，例如页面空白处单机提示层消失
+        placement:"top",
+        html:true,
+        content:'<p style="width: 500px;">如果您的时间持续到现在，请选择：<a href="javascript:;" onclick="obclicks()">至今</a></p><p></p>'
+    });
     //设置日期时间控件
     $('.form_date').datetimepicker({
         language:  'zh-CN',
@@ -20,15 +41,17 @@ $(function () {
     });
 
 
+    $('.form_datetime').datetimepicker({
+        format: 'yyyy-mm',
+        autoclose: true,
+        todayBtn: true,
+        startView: 'year',
+        minView:'year',
+        maxView:'decade',
+        language:  'zh-CN',
+    });
 
-    click_s();
-    click_dh();
-    click_top();
-    click_delete();
-    area_city();
-    click_judge();
-    click_radio();
-    click_remve();
+
 
     /*/情况说明/*/
     $('.exp a').click(function () {
@@ -331,7 +354,7 @@ $(function () {
     })
 
 });
-var self = $(this);
+
 
 function chang_info(arrs) {
     var xco =  $('.modal-body');
@@ -679,4 +702,79 @@ function click_remve() {
         console.log(do_height);
         doing.html("").height(do_height);
     })
+}
+
+// 至今操作
+function bind_input() {
+    $("[data-toggle='popover']").focus(function(){
+       var _this = $(this);
+       x_remove(_this);
+    });
+}
+function obclicks() {
+    x_remove().val("至今")
+}
+//克隆操作
+function click_clone() {
+    $(".issue").on("click",".btn_add",function () {
+      //alert("获取到节点");
+        var _this = $(this);
+        var par = _this.closest('hgroup').parent();
+        var num = par.children().length;
+       if(num <3){
+           if(num==2){
+          _this.popover({
+              placement:"right",    //定位方向
+              trigger:"hover",
+              title:"温馨提示",  //如果不需要标题就不要配置这个选项
+              content:"最多可以新增两项"
+          });
+           }
+           _work();
+       }
+
+        function _work() {
+            var child = _this.closest('hgroup').clone();
+            child.find('input').val(" ");
+            child.find('textarea').val(" ");
+            var par_add =child.find('.btn_add').parent();
+            par_add.empty();
+            var removex = $('<a href="javascript:;"  data-toggle="tooltip" data-placement="right" title="删除该新增信息板块"' +
+                'class="remove_add"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>')
+            par_add.append(removex);
+            if( child.find('.dropdown').find('em').length>0){
+                child.find('.dropdown').find('em').html(" - 请选择 -");
+            }
+            child.find('.form_datetime').datetimepicker({
+                format: 'yyyy-mm',
+                autoclose: true,
+                todayBtn: true,
+                startView: 'year',
+                minView:'year',
+                maxView:'decade',
+                language:  'zh-CN',
+            });
+            child.find("[data-toggle='popover']").popover({
+                trigger:"focus",    //如果设为focus 当按钮失去焦点提示层会消失，例如页面空白处单机提示层消失
+                placement:"top",
+                html:true,
+                content:'<p style="width: 500px;">如果您的时间持续到现在，请选择：<a href="javascript:;" onclick="obclicks()">至今</a></p><p></p>'
+            });
+            child.find('.remove_add').tooltip();
+            par.prepend(child);
+
+
+        }
+    })
+}
+
+//子版块自己删除
+function child_remove() {
+
+    $(".issue").on("click",".remove_add",function () {
+        $(this).closest('hgroup').remove();
+        $(".btn_add").popover('destroy');
+
+    })
+
 }

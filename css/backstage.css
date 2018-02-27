@@ -633,7 +633,9 @@ table td, table th {
   float: left;
 }
 .issue section .add-on {
-  height: 40px;
+  padding: 13px !important;
+  position: relative;
+  left: -2px;
 }
 
 .area_f, .area_c {
