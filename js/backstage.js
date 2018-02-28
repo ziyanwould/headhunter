@@ -16,6 +16,8 @@ $(function () {
     bind_input();
     click_clone();
     child_remove();
+    click_num();
+    text_change();
 
     $("[data-toggle='tooltip']").tooltip();/*启动提示*/
     $('.dropdown-toggle').dropdown();/*启动下拉*/
@@ -50,6 +52,8 @@ $(function () {
         maxView:'decade',
         language:  'zh-CN',
     });
+
+
 
 
 
@@ -654,7 +658,7 @@ function click_judge() {
            if(self){
                alert_x("成功！您成功发布了简历","alert-success",3000)
            }else {
-               alert_x("失败！您的表单未填项，请检查后重新提交！","alert-danger",3000)
+               alert_x("失败！您的表单有未填项，请检查后重新提交！","alert-danger",3000)
            }
        },200)
 
@@ -680,6 +684,10 @@ function click_radio() {
             if(shebao.indexOf("社保所在地")==0){
                 _this.closest('section').children('.dropdown').eq(0).find('em').html(" - 省 -");
                 _this.closest('section').children('.dropdown').eq(1).find('em').html(" - 市 -");
+            }
+            if(shebao.indexOf("招聘人数")==0){
+                _this.closest('section').find('input').val("");
+
             }
 
 
@@ -776,5 +784,35 @@ function child_remove() {
         $(".btn_add").popover('destroy');
 
     })
+
+}
+
+//绑定内容框
+function click_num() {
+
+    $('.hr_numx').focus(function () {
+
+
+        var _this = $(this);
+
+        _this.closest('section').find('input[type="radio"]').removeAttr('checked');
+    })
+
+
+}
+
+//50字符处理
+function text_change() {
+   $('.change_text').on('blur keyup input',function(){
+       var _this = $(this);
+       var text1=_this.val().length;
+       var sy   = 50 - text1
+       _this.closest('section').find('i').eq(0).html(text1);
+       _this.closest('section').find('i').eq(1).html(sy);
+       if(text1>50){
+           _this.val(_this.val().substring(0, 50))
+       }
+   })
+
 
 }

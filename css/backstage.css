@@ -588,6 +588,10 @@ table td, table th {
   height: 26px;
   width: 292px;
 }
+.issue section .i_title .input_big, .issue section .dropdown .input_big {
+  height: 26px;
+  width: 472px;
+}
 .issue section .input-append .add-on, .issue section .input-prepend .add-on {
   display: inline-block;
   width: auto;
