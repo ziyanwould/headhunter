@@ -697,3 +697,49 @@ table td, table th {
   float: right;
   margin-left: 14px;
 }
+
+.issue header {
+  height: 45px;
+  text-align: center;
+  padding-top: 65px;
+  padding-bottom: 35px;
+}
+.issue header span {
+  font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  color: #666666;
+  position: relative;
+  left: 10px;
+  top: -18px;
+}
+.issue form {
+  width: 738px;
+  height: 328px;
+  border: 1px solid #EEEEEE;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.issue form label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  font-size: 14px;
+  color: #666666;
+}
+.issue form .padding_bottom {
+  padding-bottom: 25px;
+}
+.issue form span {
+  font-size: 13px;
+  color: #FF0000;
+  display: inline-block;
+  padding-top: 3px;
+  text-align: left;
+}
+.issue form .form-control {
+  width: 188px;
+  height: 22px;
+  display: inline-block;
+}

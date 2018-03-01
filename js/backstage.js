@@ -1,7 +1,8 @@
 /**
  * Created by lbx on 2018/2/24.
  */
-var numbers = 0;
+//var numbers = 0;
+var countdown=60;
 var self = $(this);
 $(function () {
 
@@ -18,6 +19,9 @@ $(function () {
     child_remove();
     click_num();
     text_change();
+    click_pass();
+
+
 
     $("[data-toggle='tooltip']").tooltip();/*启动提示*/
     $('.dropdown-toggle').dropdown();/*启动下拉*/
@@ -813,6 +817,111 @@ function text_change() {
            _this.val(_this.val().substring(0, 50))
        }
    })
+
+
+}
+
+/*手机验证码、
+* */
+
+function settime(obj) {
+    if (countdown == 0) {
+        obj.val("免费获取验证码");
+        obj.removeAttr("disabled");
+
+        countdown = 60;
+        return ;
+
+    } else {
+        obj.prop('disabled', true);
+        obj.val(countdown+"s后可以重新发送");
+       console.log(countdown)
+        countdown--;
+    }
+    setTimeout(function() {
+            settime(obj) }
+        ,1000)
+}
+
+
+function click_pass() {
+    /*获取验证码*/
+    $('#btn').click(function () {
+        var _this = $(this)
+        settime(_this);
+    });
+    /*获得焦点销毁所有提示*/
+    $('#form').find('input').focus(function () {
+        $(this).popover('destroy');
+    });
+    /*修改密码*/
+    $('#btn_pss').click(function () {
+        var fdc= true;
+
+        var pass = "zhongzhu71";//初始密码
+        var pass_n = 111111;//手机验证码
+
+        var old_pass = $('#oldpass');
+        var new_pass  = $('#newpass');
+        var new_passAgain = $('#newpassAgain');
+        var new_num =$('#pass_num');
+        if(old_pass.val()==""){
+            small_show(old_pass,"请你输入登入密码");
+            fdc=false;
+        }else if(old_pass.val()!= pass){
+            small_show(old_pass,"请你输入登入密码不正确！")
+            fdc=false;
+        };
+
+
+        if(new_pass.val()==""){
+            small_show(new_pass,"请你输入新登入密码");
+            fdc=false;
+        }else if(!(/^[A-Z][A-z0-9]*$/).test(new_pass.val())){
+            small_show(new_pass,"请首字母大写");
+            fdc=false;
+        }else if((/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/).test(new_pass.val())){
+            small_show(new_pass,"密码格式不正确");
+            fdc=false;
+        }
+        if(new_passAgain.val()==""){
+            small_show(new_passAgain,"请再次输入密码");
+            fdc=false;
+        }
+        else if(new_passAgain.val()!=new_pass.val()){
+            small_show(new_passAgain,"两次密码不一致");
+            fdc=false;
+        }
+
+        if(new_num.val()==""){
+            small_show(new_num,"请输入验证码");
+            fdc=false;
+        }else if(pass_n!=new_num.val()){
+            small_show(new_num,"验证码输入错误");
+            fdc=false;
+        }
+
+       if(fdc){
+           //alert("success");
+           $(this).closest('.issue').find('form').eq(1).show();
+           $(this).closest('.issue').find('form').eq(0).hide();
+           $(this).closest('.issue').find('header').eq(0).hide();
+       }
+
+
+
+        function small_show(self,count) {
+            self.popover({
+                trigger:"focus",
+                placement:"top",
+                html:true,
+                content:'<p style="color: #C41014">'+count+'</p>'
+            }).popover('show');
+        }
+    });
+
+
+
 
 
 }
