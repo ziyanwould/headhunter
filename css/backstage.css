@@ -728,6 +728,9 @@ table td, table th {
   font-size: 14px;
   color: #666666;
 }
+.issue form label.ch_ph {
+  width: 130px;
+}
 .issue form .padding_bottom {
   padding-bottom: 25px;
 }
@@ -742,4 +745,32 @@ table td, table th {
   width: 188px;
   height: 22px;
   display: inline-block;
+}
+.issue .ems {
+  font-family: 'Arial-BoldItalicMT', 'Arial Bold Italic', 'Arial';
+  font-weight: 700;
+  font-style: italic;
+  font-size: 28px;
+  color: #ECECEC;
+  display: inline-block;
+  padding-right: 10px;
+}
+.issue em.active {
+  color: #DEE9FE;
+}
+.issue .is {
+  font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  color: #999999;
+  font-size: 16px;
+}
+.issue .is.active {
+  color: #487FCE;
+}
+.issue .imgs {
+  position: relative;
+  top: 10px;
+  padding-left: 5px;
+  width: 34px;
 }
