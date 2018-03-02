@@ -6487,11 +6487,13 @@
              <div class="count val2" >
                  <div class="issue" style="position: relative">
                      <header>
-                         <em class="ems active">01</em><i class="is active">验证安全信息</i><img class="imgs"  src="images/phone_r.png">
-                         <em class="ems ">02</em><i class="is">绑定新手机</i><img class="imgs"  src="images/phone_r.png">
+                         <em class="ems active">01</em><i class="is active">验证安全信息</i>
+                         <img class="imgs"  src="images/phone_r.png">
+                         <em class="ems ">02</em><i class="is">绑定新手机</i>
+                         <img class="imgs"  src="images/phone_r.png">
                          <em class="ems ">03</em><i class="is">绑定新手机</i>
                      </header>
-                     <form   >
+                     <form id="forms"   >
 
 
 
@@ -6500,19 +6502,22 @@
                              <label class="ch_ph">
                                  已认证的手机号码：</label>
                              <p  style="display: inline-block;width: 219px;" >186******700</p>
+
+
                          </div>
                          <div class="padding_bottom clearfix" style="text-align: center">
                              <label class="ch_ph">填写手机验证码：</label>
-                             <input type="text" class="form-control ch_ph"   style="width: 45px"  placeholder="">
-                             <input type="button" class="btn btn-default ch_ph"  style="width: 115px"  value="免费获取验证码" />
+                             <input type="text" id="phone_num" class="form-control ch_ph"   style="width: 45px"  placeholder="">
+                             <input type="button" id="btns" class="btn btn-default ch_ph"  style="width: 115px"  value="免费获取验证码" />
 
                          </div>
                          <div  style="text-align: center">
-                             <button type="button"  class="btn  btn-info" style="width: 225px">下一步</button>
+                             <button type="button"  id="push_phone" class="btn  btn-info" style="width: 225px">下一步</button>
                          </div>
 
 
                      </form>
+             </div>
              </div>
              <!--权限管理 赋值空-->
              <div class="count val3" >
@@ -6520,6 +6525,60 @@
              </div>
              <!--权限设置-->
              <div class="count val4" >
+                 <div class="jurisdictio">
+                     <button type="button" class="btn btn-default btn-sm">新增权限</button>
+                 </div>
+                 <div class="table-responsive ">
+                     <table class="table table-hover table-bordered">
+                         <caption>
+
+                         </caption>
+                         <thead>
+                         <tr>
+
+                             <th>权限设置</th>
+                             <th>权限功能</th>
+                             <th>创建时间</th>
+                             <th>操作</th>
+
+
+
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                             <td>管理员</td>
+                             <td>信息管理-简历管理，信息管理-职位管理，信息管理-新闻管理，审核管理-简历审核，审核管理-职位审核，<br>
+                                 发布管理-简历发布，发布管理-职位发布，发布管理-新闻发布，帐号管理-帐号信息，帐号管理-权限管理，<br>
+                             </td>
+                             <td colspan="2">禁止修改管理员权限</td>
+                         </tr>
+                         <tr>
+                             <td>组长</td>
+                             <td>信息管理-简历管理，信息管理-职位管理，信息管理-新闻管理，审核管理-简历审核，审核管理-职位审核，<br>
+                                 发布管理-简历发布，发布管理-职位发布，<br>
+                             </td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <button type="button" class="btn btn-warning btn-sm">修改</button>
+                                 <button type="button" class="btn btn-danger btn-sm">删除</button>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>组长</td>
+                             <td>信息管理-简历管理，信息管理-职位管理，信息管理-新闻管理，审核管理-简历审核，审核管理-职位审核，<br>
+                                 发布管理-简历发布<br>
+                             </td>
+                             <td>2017-08-31 09:32:55</td>
+                             <td>
+                                 <button type="button" class="btn btn-warning btn-sm">修改</button>
+                                 <button type="button" class="btn btn-danger btn-sm">删除</button>
+                             </td>
+                         </tr>
+
+                         </tbody>
+                     </table>
+                 </div>
 
              </div>
              <!--成员管理-->
@@ -6530,7 +6589,10 @@
          </div>
      </div>
 
-     <!--顶部固定菜单-->
+
+
+ </div>
+ <!--顶部固定菜单-->
  <div class="com_top">
      <a href="javascript:;" class="gk">平台概况</a>
      <div>
@@ -6539,6 +6601,87 @@
      </div>
 
  </div>
+
+ <!--权限管理弹出框-->
+ <div class="RManagement">
+     <!--新增权限-->
+      <div class="rm1">
+          <h2><span>新增权限</span><em>x</em></h2>
+          <h3>权限名称<input type="text"></h3>
+          <table class="table  table-css table-bordered">
+              <caption>
+
+              </caption>
+              <thead>
+              <tr>
+                  <th>选择</th>
+                  <th>权限功能</th>
+                  <th>权限功能</th>
+
+              </tr>
+              </thead>
+              <tbody style="height: 323px;overflow: scroll">
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td rowspan="3">信息管理</td>
+                  <td> 简历管理</td>
+              </tr>
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td> 职位管理</td>
+              </tr>
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td> 新闻管理</td>
+              </tr>
+
+
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td rowspan="3">审核管理</td>
+                  <td> 简历审核</td>
+              </tr>
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td> 职位审核</td>
+              </tr>
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td> 简历发布</td>
+              </tr>
+
+
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td rowspan="2">发布管理</td>
+                  <td> 职位发布</td>
+              </tr>
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td> 新闻发布</td>
+              </tr>
+
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td rowspan="2">账号管理</td>
+                  <td> 账号信息</td>
+              </tr>
+              <tr>
+                  <td> <input type="checkbox" ></td>
+                  <td> 权限管理</td>
+              </tr>
+
+
+
+              </tbody>
+          </table>
+          <div>
+              <button type="button" class="btn btn-default">确定</button>
+              <button type="button" class="btn btn-default">取消</button>
+          </div>
+
+      </div>
+
  </div>
 
  <!--情况说明弹出框-->

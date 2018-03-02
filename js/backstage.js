@@ -20,6 +20,7 @@ $(function () {
     click_num();
     text_change();
     click_pass();
+    push_phone();
 
 
 
@@ -363,7 +364,6 @@ $(function () {
 
 });
 
-
 function chang_info(arrs) {
     var xco =  $('.modal-body');
     xco.html(" ");
@@ -385,7 +385,6 @@ function chang_info(arrs) {
 
 
 }
-
 
 /**/
 function bli() {
@@ -823,7 +822,6 @@ function text_change() {
 
 /*手机验证码、
 * */
-
 function settime(obj) {
     if (countdown == 0) {
         obj.val("免费获取验证码");
@@ -835,15 +833,13 @@ function settime(obj) {
     } else {
         obj.prop('disabled', true);
         obj.val(countdown+"s后可以重新发送");
-       console.log(countdown)
+        console.log(countdown)
         countdown--;
     }
     setTimeout(function() {
             settime(obj) }
         ,1000)
 }
-
-
 function click_pass() {
     /*获取验证码*/
     $('#btn').click(function () {
@@ -910,14 +906,7 @@ function click_pass() {
 
 
 
-        function small_show(self,count) {
-            self.popover({
-                trigger:"focus",
-                placement:"top",
-                html:true,
-                content:'<p style="color: #C41014">'+count+'</p>'
-            }).popover('show');
-        }
+
     });
 
 
@@ -925,3 +914,118 @@ function click_pass() {
 
 
 }
+
+/*手机号绑定*/
+function push_phone() {
+    var phone =666666;
+    var jidu = 1;
+    $('#forms').find('input').focus(function () {
+        $(this).popover('destroy');
+    });
+
+    $('#btns').click(function () {
+        var _this = $(this);
+        settime(_this);
+    });
+    $('#push_phone').click(function () {
+        var _this = $(this);
+        var new_num =$('#phone_num');
+        var new_phone =$('#new_phone')
+
+        switch(jidu)
+        {
+            case 1:
+                if(new_num.val()=="" ){
+                    small_show(new_num,"请输入验证码");
+
+                }else if( phone!=new_num.val() ){
+                    small_show(new_num,"验证码输入错误");
+
+
+                }else {
+                    $('#btns').val("免费获取验证码");
+                    countdown = 0 //重置
+                    new_num.val("");
+                    small_p1(_this);
+                    jidu=2;
+                }
+                break;
+            case 2:
+                /*绑定新手机*/
+                new_phone.focus(function () {
+                    $(this).popover('destroy');//给新元素绑定事件
+                });
+                var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+                if(new_phone.val()==""){
+                   small_show(new_phone,"手机号不能为空");
+               }else if(!myreg.test(new_phone.val())){
+                   small_show(new_phone,"手机格式出错");
+               }else  if(new_num.val()=="" ){
+                    small_show(new_num,"请输入验证码");
+
+                }else if( phone!=new_num.val() ){
+                    small_show(new_num,"验证码输入错误");
+
+
+                }else {
+                    //已成功绑定新手机
+                    small_over(_this)
+                    jidu=3;
+                }
+                break;
+            default:
+
+        }
+
+
+
+
+
+        
+    });
+    function small_p1(self) {
+        var par =self.closest('form').children('div');
+        par.eq(0).find('.ch_ph').html('请输入新手机号码：');
+        par.eq(0).find('p').remove();
+        par.eq(0).append('  <input type="text" id="new_phone"  class="form-control" >');
+          var dh =   par.closest('.issue').find('header');
+          dh.find('em ,i').removeClass('active');
+          dh.find('em,i').eq(3).addClass('active');
+          dh.find('em,i').eq(2).addClass('active');
+         self.html("提 交");
+
+
+    }
+    
+    function small_over(self) {
+        var par =self.closest('form').children('div');
+        var dh =   par.closest('.issue').find('header');
+        dh.find('em ,i').removeClass('active');
+        dh.find('em,i').eq(4).addClass('active');
+        dh.find('em,i').eq(5).addClass('active');
+        self.parent().empty().append('<a class="btn btn-info" href="#" role="button">返回平台概况</a>');
+        var conut =$(' <div style="float: left;margin-right: 16px;margin-left: 160px;padding-top: 70px"> ' +
+            '<img src="images/phone_gou.png" width="60">'+
+        '</div>'+
+        ' <div style="float: left;padding-top: 70px">'+
+        '<h3 style="color: #666666;font-weight: 700;font-style: normal;margin-bottom: 25px;   font-size: 24px;  text-align: left;">已成功绑定新手机</h3>'+
+        ' <p style="font-weight: 400;   font-style: normal; margin-bottom: 18px;  font-size: 13px;text-align: left;">• 您的新手机号码绑定成功。</p>'+
+        '<p style="font-weight: 400;   font-style: normal; margin-bottom: 18px;  font-size: 13px;text-align: left;">• 为避免账户被盗，若手机丢失或停用，请及时更换。</p>'+
+        '</div>');
+        par.eq(0).empty().html(conut);
+        par.eq(1).remove();
+
+
+    }
+}
+
+
+function small_show(self,count) {
+    self.popover({
+        trigger:"focus",
+        placement:"top",
+        html:true,
+        content:'<p style="color: #C41014">'+count+'</p>'
+    }).popover('show');
+}
+
