@@ -1,7 +1,7 @@
 /**
  * Created by lbx on 2018/2/24.
  */
-//var numbers = 0;
+var numbers = 0;
 var countdown=60;
 var self = $(this);
 $(function () {
@@ -21,6 +21,8 @@ $(function () {
     text_change();
     click_pass();
     push_phone();
+    qx_setting();
+    zy_setting();
 
 
 
@@ -1028,4 +1030,209 @@ function small_show(self,count) {
         content:'<p style="color: #C41014">'+count+'</p>'
     }).popover('show');
 }
+/*权限设置*/
+function qx_setting() {
+    $('.setting').find('input').focus(function () {
+        $(this).popover('destroy');
+    });
+    $('.RManagement h2 em,.btn_no').click(function () {
+        $(this).parent().parent().hide();
+        $('.RManagement').hide();
+    });
 
+    $('#add_se').click(function () {
+        $('.RManagement').show();
+        $('.rm1').show();
+        x_remove($(this));
+        $('.rm1 input[type="text"]').val("");
+        $('.rm1 input[type="checkbox"]').prop("checked", false);
+        $('.rm1 tr:nth-last-child(2)').find('input[type="checkbox"]').prop("checked", "checked");
+    });
+    /*新增/修改权限*/
+    $('.btn_yes').click(function () {
+      var par =  $('.rm1');
+      var myTitle =par.find('h2').find('span').html();
+      var find_in = par.find('input[type="text"]').val();
+
+      if ( find_in==""){
+          small_show(par.find('input[type="text"]'),"权限名称不能为空");
+      }else {
+          var count ="";
+          /*判断是否选中*/
+
+         par.find('input[type="checkbox"]').each(function(){
+
+            if( $(this).prop('checked')){
+              var count2 = $(this).closest('tr').children('td:last').html();
+              var count1  = $(this).closest('tr').children('td:last').attr("data-content");
+              count += count1 +"-"+count2+"，";
+              if(count.length>50 &&count.length<59){
+                  count +="<br/>";
+              }
+            }
+          });
+          var date = new Date();
+          var year = date.getFullYear();
+          var month = date.getMonth()+1;
+          var day = date.getDate();
+          var hour = date.getHours();
+          var minute = date.getMinutes();
+          var second = date.getSeconds();
+         var this_time =(year+'-'+month+'-'+day+'- '+hour+':'+minute+':'+second);
+         console.log(count);
+         var nes_tr =$('<tr> <td>'+find_in+'</td>' +
+             ' <td>'+count+' </td>' +
+             ' <td>'+this_time+'</td> ' +
+             '<td> <button type="button" class="btn btn-warning qx_chang btn-sm">修改</button> ' +
+             '<button type="button" class="btn btn-danger btn-sm">删除</button> </td></tr>');
+         if (myTitle=="新增权限"){
+             x_remove().closest('.count').find('tbody').append(nes_tr);
+             $('.RManagement').hide();
+             $('.RManagement .rm1').hide();
+         }else if(myTitle=="修改权限"){
+             x_remove().closest('tr').children('td').eq(1).html(count);
+             x_remove().closest('tr').children('td').eq(0).html(find_in);
+             par.find('h2').find('span').html("新增权限");
+             $('.RManagement').hide();
+             $('.RManagement .rm1').hide();
+         }
+
+
+
+      }
+    })
+
+    /*修改权限*/
+   /*确保有空格间隔*/
+    $(document).on("click",".qx_chang",function(){
+
+        $('.rm1 input[type="checkbox"]').prop("checked", false);
+        var _this = $(this);
+        x_remove(_this);
+        var par =$('.rm1')
+        par.find('h2').find('span').html("修改权限");
+
+        $('.RManagement').show();
+        par.show();
+        var x_this = _this.closest('tr');
+        var title = x_this.children('td').eq(0).html();
+        par.find('input[type="text"]').val(title);
+        var val_count = x_this.children('td').eq(1).html();
+
+        par.find('input[type="checkbox"]').each(function () {
+
+            var nts = $(this).closest('tr').children('td:last').html();
+
+            if ( val_count.indexOf(''+nts+'')>1){
+                $(this).prop("checked", "checked")
+
+            }
+
+        })
+
+
+
+    })
+    
+}
+
+/*成员管理*/
+
+function zy_setting() {
+
+
+  $('.add_compass').click(function () {
+      $('.RManagement').show();
+      $('.rm2').show();
+      x_remove($(this));
+      $('.rm2').find('input').val("");
+      $('.rm2').children().eq(4).find('.dropdown-toggle').find("em").html("- 请选择 -");
+  });
+
+    $('.cp_no').click(function () {
+        $('.RManagement').hide();
+        $('.rm2').hide();
+        $('.rm3').hide();
+    });
+    $('.cp_yes').click(function () {
+
+      var _this = $(this);
+      var par =_this.closest('.setting');
+      var title =par.find("h2").find('span').html();
+      if (title=="添加成员"){
+
+
+          var name = par.children().eq(1).find('input').val();
+          var name_area = par.children().eq(1).find('input');
+          var phone = par.children().eq(2).find('input').val();
+          var phone_area = par.children().eq(2).find('input');
+          var pass = par.children().eq(3).find('input').val();
+          var pass_area = par.children().eq(3).find('input');
+          var zoo = par.children().eq(4).find('.dropdown-toggle').find("em").html();
+          var zoo_area = par.children().eq(4).find('.dropdown-toggle').find("em");
+
+          var date = new Date();
+          var year = date.getFullYear();
+          var month = date.getMonth()+1;
+          var day = date.getDate();
+          var hour = date.getHours();
+          var minute = date.getMinutes();
+          var second = date.getSeconds();
+          var this_time =(year+'-'+month+'-'+day+'- '+hour+':'+minute+':'+second);
+
+          /*手机格式化*/
+
+
+          if(( /^1[3,5,8]\d{9}$/).test(phone)){
+              var reg = /^(\d{3})(\d{4})(\d{4})$/;
+              var matches = reg.exec(phone);
+              var phoneS = matches[1] + '-' + matches[2] + '-' + matches[3];
+          }
+
+
+          var countS = $('<tr> <td>'+name+'</td> ' +
+              '<td>'+phoneS+'</td>' +
+              '<td>'+zoo+' </td> ' +
+              '<td>'+this_time+'</td> ' +
+              '<td> <button type="button" class="btn btn-warning copss_chang btn-sm">修改</button> ' +
+              '<button type="button" class="btn btn-danger btn-sm">删除</button> </td> </tr>');
+
+            if(name==""){
+                small_show(name_area,"请输入姓名");
+
+            }
+            else if(phone==""){
+                small_show(phone_area,"请输入手机号");
+
+            }else if(!( /^1[3,5,8]\d{9}$/).test(phone)){
+                small_show(phone_area,"手机格式不正确");
+
+            }
+
+
+          else if(pass==""){
+              small_show(pass_area,"请你输入密码");
+
+          }else if(!(/^[A-Z][A-z0-9]*$/).test(pass)){
+              small_show(pass_area,"请首字母大写");
+
+          }else if((/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/).test(pass)){
+              small_show(pass_area,"密码格式不正确");
+
+          }
+          else if(zoo=="- 请选择 -"){
+              small_show(zoo_area,"请选择权限");
+              setTimeout(function () {
+                  zoo_area.popover('destroy');
+              },2000)
+
+          }
+          else {
+            x_remove().closest('.count').find('tbody').append(countS);
+                $('.RManagement').hide();
+             x_remove().closest('.setting').hide()
+          }
+
+      }
+    })
+}
