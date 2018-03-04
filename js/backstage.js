@@ -475,7 +475,7 @@ function click_top() {
 
 /**/
 function click_delete() {
-    $('.isMove').click(function () {
+    $(document).on("click",".isMove",function(){
         var arr = [];
         arr['title'] = '确认操作';
         arr['count'] = '确实要对当前选中的信息进行  <a href="javascript:;" style="color: red">“删除”</a> 的操作？';
@@ -1084,7 +1084,7 @@ function qx_setting() {
              ' <td>'+count+' </td>' +
              ' <td>'+this_time+'</td> ' +
              '<td> <button type="button" class="btn btn-warning qx_chang btn-sm">修改</button> ' +
-             '<button type="button" class="btn btn-danger btn-sm">删除</button> </td></tr>');
+             '<button type="button" class="btn btn-danger isMove btn-sm">删除</button> </td></tr>');
          if (myTitle=="新增权限"){
              x_remove().closest('.count').find('tbody').append(nes_tr);
              $('.RManagement').hide();
@@ -1141,14 +1141,14 @@ function qx_setting() {
 function zy_setting() {
 
 
-  $('.add_compass').click(function () {
-      $('.RManagement').show();
-      $('.rm2').show();
-      x_remove($(this));
-      $('.rm2').find('input').val("");
-      $('.rm2').children().eq(4).find('.dropdown-toggle').find("em").html("- 请选择 -");
-  });
 
+    $('.add_compass').click(function () {
+        $('.RManagement').show();
+        $('.rm2').show();
+        x_remove($(this));
+        $('.rm2').find('input').val("");
+        $('.rm2').children().eq(4).find('.dropdown-toggle').find("em").html("- 请选择 -");
+    });
     $('.cp_no').click(function () {
         $('.RManagement').hide();
         $('.rm2').hide();
@@ -1195,7 +1195,7 @@ function zy_setting() {
               '<td>'+zoo+' </td> ' +
               '<td>'+this_time+'</td> ' +
               '<td> <button type="button" class="btn btn-warning copss_chang btn-sm">修改</button> ' +
-              '<button type="button" class="btn btn-danger btn-sm">删除</button> </td> </tr>');
+              '<button type="button" class="btn btn-danger isMove btn-sm">删除</button> </td> </tr>');
 
             if(name==""){
                 small_show(name_area,"请输入姓名");
@@ -1233,6 +1233,133 @@ function zy_setting() {
              x_remove().closest('.setting').hide()
           }
 
+      }else {
+
+          var name = par.children().eq(1).find('input').val();
+          var name_area = par.children().eq(1).find('input');
+          var phone = par.children().eq(2).find('input').val();
+          var phone_area = par.children().eq(2).find('input');
+          var ifchange = par.children().eq(3).find('a').html();
+          var pass = par.children().eq(4).find('input').val();
+          var pass_area = par.children().eq(4).find('input');
+          var zoo = par.children().eq(5).find('.dropdown-toggle').find("em").html();
+          var zoo_area = par.children().eq(5).find('.dropdown-toggle').find("em");
+
+          var date = new Date();
+          var year = date.getFullYear();
+          var month = date.getMonth()+1;
+          var day = date.getDate();
+          var hour = date.getHours();
+          var minute = date.getMinutes();
+          var second = date.getSeconds();
+          var this_time =(year+'-'+month+'-'+day+'- '+hour+':'+minute+':'+second);
+
+          /*手机格式化*/
+
+
+          if(( /^1[3,5,8]\d{9}$/).test(phone)){
+              var reg = /^(\d{3})(\d{4})(\d{4})$/;
+              var matches = reg.exec(phone);
+              var phoneS = matches[1] + '-' + matches[2] + '-' + matches[3];
+          }
+
+
+          // var countS = $('<tr> <td>'+name+'</td> ' +
+          //     '<td>'+phoneS+'</td>' +
+          //     '<td>'+zoo+' </td> ' +
+          //     '<td>'+this_time+'</td> ' +
+          //     '<td> <button type="button" class="btn btn-warning copss_chang btn-sm">修改</button> ' +
+          //     '<button type="button" class="btn btn-danger btn-sm">删除</button> </td> </tr>');
+
+          if(name==""){
+              small_show(name_area,"请输入姓名");
+
+          }
+          else if(phone==""){
+              small_show(phone_area,"请输入手机号");
+
+          }else if(!( /^1[3,5,8]\d{9}$/).test(phone)){
+              small_show(phone_area,"手机格式不正确");
+
+          }
+          else if(ifchange==="取消修改密码"){
+               if(pass==""){
+                      small_show(pass_area,"请你输入密码");
+
+
+                  }else if(!(/^[A-Z][A-z0-9]*$/).test(pass) ){
+                      small_show(pass_area,"请首字母大写");
+
+                  }else if((/^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$/).test(pass) ){
+                      small_show(pass_area,"密码格式不正确");
+
+                  } else if(zoo=="- 请选择 -"){
+                   small_show(zoo_area,"请选择权限");
+                   setTimeout(function () {
+                       zoo_area.popover('destroy');
+                   },2000)
+
+               }else{
+                   succeeful()
+               }
+
+          }
+
+          else if(zoo=="- 请选择 -"){
+              small_show(zoo_area,"请选择权限");
+              setTimeout(function () {
+                  zoo_area.popover('destroy');
+              },2000)
+
+          }else{
+              succeeful()
+          }
+
+          function succeeful() {
+             var par = x_remove().closest('tr');
+             par.children().eq(0).html(name);
+              par.children().eq(1).html(phoneS);
+               par.children().eq(2).html(zoo);
+               par.children().eq(3).html(this_time);
+                  $('.RManagement').hide();
+                  $('.RManagement .rm3').hide();
+          }
+
+
+
+
       }
+    });
+
+    $('#chang_pass').click(function () {
+       var childs = $('#chang_pas');
+       var df = $(this).html();
+         if (df=="修改密码"){
+             $(this).html('取消修改密码');
+             childs.show();
+         }else {
+             $(this).html('修改密码');
+             childs.hide();
+         }
     })
+    $(document).on("click",".copss_chang",function(){
+        var par = $(this).closest('tr');
+        var name =par.children().eq(0).html();
+        var phone =par.children().eq(1).html();
+        /*字符串处理*/
+        var reg = new RegExp("-","g");
+        var iphone = phone.replace(reg,"");
+
+        var qx_setting =par.children().eq(2).html();
+        var oldpass = "A8888888";
+        var Rm3 =  $('.rm3');
+         Rm3.children().eq(1).find('input').val(name);
+        Rm3.children().eq(2).find('input').val(iphone);
+        Rm3.children().eq(4).find('input').val("");
+        Rm3.children().eq(5).find('.dropdown-toggle').find('em').html(qx_setting);
+        $('.RManagement').show();
+         Rm3.show();
+        x_remove($(this));
+    })
+
 }
